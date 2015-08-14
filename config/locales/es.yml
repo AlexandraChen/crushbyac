@@ -20,5 +20,4 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 es:
-	#Validaciones
-	full_name: "Por favor, escribe tu primer nombre y tu primer apellido separado por un espacio."
+  full_name_error: "Por favor, escribe tu nombre y apellido separado por un espacio"

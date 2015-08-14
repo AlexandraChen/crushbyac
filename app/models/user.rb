@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   def full_name_length
 		fullname = full_name.split
 		if fullname.size <= 1
-			errors.add(:full_name, I18n.t(:full_name))
+			errors.add(:full_name, I18n.t(:full_name_error))
 		end
 	end
  

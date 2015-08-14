@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
- 	describe "creation" do
+ 	describe "Creation" do
 	  before(:each) do
 	    @user_params = {
 	      full_name: "Alexandra Chen",
@@ -18,6 +18,10 @@ RSpec.describe User, type: :model do
 	  	@user_params[:full_name] = "Alexandra"
 	    user = User.create(@user_params)
 	    expect(user.id).not_to be_truthy
+	  end
+	  it "should return admin role" do
+	  	user = User.create(@user_params)
+	  	expect(user.admin).to eq(false)
 	  end
 
 	end

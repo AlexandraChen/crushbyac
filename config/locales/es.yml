@@ -20,4 +20,5 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 es:
-	hello: "Hola mundo"
+	#Validaciones
+	full_name: "Por favor, escribe tu primer nombre y tu primer apellido separado por un espacio."

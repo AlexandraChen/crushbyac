@@ -1,1 +1,4 @@
 <h1> hello world </h1>
+<% if current_user %>
+	<li><%= link_to t("log_out"), '/logout' %></li>
+<% end %>

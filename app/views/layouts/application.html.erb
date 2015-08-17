@@ -8,6 +8,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="wrap">
   <%= render partial: 'sites/navbar' %>
 
   <% if notice %>
@@ -20,6 +21,7 @@
   <%= render partial: 'products/main_panel_products' %>
     
   <%= yield %>
+  </div>
   <%= render partial: 'sites/footer' %>
 
 </body>

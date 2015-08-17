@@ -1,11 +1,16 @@
 *{
   font-family: Century Gothic, sans-serif;
 }
+
+html,
+body {
+  height: 100%;
+  width: 100%
+}
 .navbar-menu{
   background: white;
   height: 4.8em;
   border: 0;
-  opacity: 0.95;
 }
 
 .container-fluid{
@@ -58,6 +63,13 @@ img[src="assets/sites/logo-crush.jpg"]{
     width: 100%;
      text-align: right;
   }
+}
+
+.wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  // margin: 0 auto -60px;
 }
 
 footer{

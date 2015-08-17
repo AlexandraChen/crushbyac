@@ -16,12 +16,11 @@
    <p class="alert"><%= alert %></p>
   <% end %>
 
-    <%= render partial: 'sites/main_panel' %>
-
-
-
-  
-<%= yield %>
+  <%= render partial: 'sites/main_panel' %>
+  <%= render partial: 'products/main_panel_products' %>
+    
+  <%= yield %>
+  <%= render partial: 'sites/footer' %>
 
 </body>
 </html>

@@ -22,7 +22,7 @@ img[src="assets/sites/logo-crush.jpg"]{
 }
 
 .main-panel{
-  height: 35em;
+  height: 45em;
   width: 100%;
   background: url("/assets/sites/sanblas.jpg") no-repeat;
   margin-top: -7em;
@@ -37,7 +37,7 @@ img[src="assets/sites/logo-crush.jpg"]{
 }
 
 .headlines{
-  bottom: 30%;
+  bottom: 35%;
   transform: translateY(-50%);
   position: relative;
   width: 100%;
@@ -57,5 +57,17 @@ img[src="assets/sites/logo-crush.jpg"]{
     font-size: 1.5em;
     width: 100%;
      text-align: right;
+  }
+}
+
+footer{
+  text-align:center;
+  width: 100%;
+  bottom: 0;
+  height: 5em;
+  background-color: #F9F9F9;
+  p{
+  color: #777;
+  margin-top: 1.8em;
   }
 }

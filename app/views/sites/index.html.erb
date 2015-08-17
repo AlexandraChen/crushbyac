@@ -1,4 +1,10 @@
-<h1> hello world </h1>
-<% if current_user %>
-	<li><%= link_to t("log_out"), '/logout' %></li>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">  
+      <h1> hello world </h1>
+      <% if current_user %>
+        <li><%= link_to t("log_out"), '/logout' %></li>
+      <% end %>
+      </div>
+  </div>
+</div>

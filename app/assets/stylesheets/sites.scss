@@ -4,12 +4,12 @@
 
 html, body {
   height: 100%;
-  width: 100%
+  width: 100%;
 }
 .navbar-menu{
   background: white;
   height: 6em;
-  border: 0;
+  border-color: #4BBFEA;
 }
 
 .container-fluid{
@@ -22,10 +22,10 @@ html, body {
 }
 
 .navbar-default .navbar-nav>li>a {
-    color: #4BBFEA;
+  color: #4BBFEA;
 }
 
-img[src="assets/sites/logo-crush.jpg"]{
+img[src="/assets/sites/logo-crush.jpg"]{
   width: auto;
   height: 5em;
 }

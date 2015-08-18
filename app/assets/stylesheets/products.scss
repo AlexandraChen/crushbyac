@@ -1,3 +1,39 @@
+$crush-blue: #428bca;
+$light-gray: #F9F9F9;
+
 .container.product-spacer{
   padding-top: 10em;
 }
+
+.product-img{
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
+.btn.add-to-cart{
+  border-radius: 0;
+  color: white;
+  background-color: $crush-blue;
+  border: 0.5em solid $crush-blue;
+  margin-top: 50%;
+  &:hover{
+    background-color: white;
+    color: $crush-blue;
+  }
+}
+
+.site-product{
+  height: 26em;
+  width: 26em;
+  border: 0.5em solid $light-gray ;
+  position: relative;
+}
+
+// .price{
+//   height: 4em;
+//   width: 4em;
+//   background-color: black;
+
+// }

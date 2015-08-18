@@ -1,3 +1,6 @@
+$crush-blue: #73afe0;
+$light-gray: #F9F9F9;;
+
 *{
   font-family: Century Gothic, sans-serif;
 }
@@ -6,8 +9,6 @@ html, body {
   height: 100%;
   width: 100%;
 }
-
-$crush-blue: #428bca;
 
 .navbar-menu{
   background: white;
@@ -99,12 +100,39 @@ img[src="/assets/sites/logo-crush.jpg"]{
   margin-top: 5em;
 }
 
+#value-proposition{
+  height: auto;
+  width: 100%;
+  text-align: center;
+  background-color:$crush-blue;
+  margin-top: 5em;
+  p.value-proposition-text{
+    padding: 0.8em 1.5em 4em 1.5em ;
+    text-align: justify;
+    color: $light-gray;
+  }
+  p.value-proposition-title{
+    text-align: left;
+    font:{
+      weight: bold;
+      size: 2.3em;
+    };
+    color: $light-gray;
+    text-align: center;
+  }
+  .fa{
+    margin: 1em 0 0.3em 0;
+    font-size: 4em;
+    color: $light-gray;
+  }
+}
+
 footer{
   text-align:center;
   width: 100%;
   bottom: 0;
   height: 5em;
-  background-color: #F9F9F9;
+  background-color: $light-gray;
   p{
   color: #777;
   margin-top: 1.8em;

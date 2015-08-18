@@ -28,8 +28,15 @@ es:
   cart: "Cart"
   main_panel_title: "Siempre es verano en alguna parte del mundo"
   main_panel_slogan: "San Blas, Panamá"
+  #WHY
+  what: "¿Qué hacemos?"
+  how: "¿Cómo lo hacemos?"
+  why: "¿Por qué lo hacemos?"
   #PRODUCTS
   product_new_success: "Producto agregado exitosamente"
   product_new_fail: "Faltan campos para crear el producto"
   add_product: "Agregar producto"
   product_update_success: "Producto actualizado satisfactoriamente"
+  add_to_cart: "Agregar a mi shopping cart"
+  size: "Talla"
+  edit_product: "Editar ítem"

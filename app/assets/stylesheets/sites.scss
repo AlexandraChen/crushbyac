@@ -6,10 +6,13 @@ html, body {
   height: 100%;
   width: 100%;
 }
+
+$crush-blue: #428bca;
+
 .navbar-menu{
   background: white;
   height: 6em;
-  border-color: #4BBFEA;
+  border-color: $crush-blue;
 }
 
 .container-fluid{
@@ -21,8 +24,25 @@ html, body {
   background: white;
 }
 
-.navbar-default .navbar-nav>li>a {
-  color: #4BBFEA;
+.navbar-default{
+ .navbar-nav>li>a {
+    color: $crush-blue;
+  };
+  .navbar-nav>li>a>div>i{
+    font-size: 1.5em;
+    margin-top: 0.25em;
+  };
+  .navbar-nav>li>a>div{
+    border: 0.2em solid $crush-blue;
+    border-radius: 50%;
+    height: 2.5em;
+    width: 2.5em;
+    text-align: center;
+  };
+}
+
+a.navbar-media{
+  margin-top: -0.5em;
 }
 
 img[src="/assets/sites/logo-crush.jpg"]{
@@ -88,23 +108,5 @@ footer{
   p{
   color: #777;
   margin-top: 1.8em;
-  }
-}
-
-@media (max-width: 767px) {
-  .menu-links{
-    text-align: right;
-    width: 11em;
-    float: right;
-    border:0;
-  };
-  div#bs-example-navbar-collapse-1 {
-    border: 0;
-  };
-  button.navbar-toggle {
-    margin-top: 1.4em;
-  };
-  .navbar-default .navbar-toggle .icon-bar {
-    background-color: #4BBFEA;
   }
 }

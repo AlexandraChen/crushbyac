@@ -1,0 +1,17 @@
+@media (max-width: 767px) {
+  .menu-links{
+    text-align: right;
+    width: 11em;
+    float: right;
+    border:0;
+  };
+  div#bs-example-navbar-collapse-1 {
+    border: 0;
+  };
+  button.navbar-toggle {
+    margin-top: 1.4em;
+  };
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: #428bca;
+  }
+}

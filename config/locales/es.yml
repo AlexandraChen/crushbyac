@@ -23,7 +23,7 @@ es:
   #ERRORS
   full_name_error: "Por favor, escribe tu nombre y apellido separado por un espacio"
   #SITE
-  why: "¿Por qué Crush?"
+  why_crush: "¿Por qué Crush?"
   contact: "Contáctanos"
   cart: "Cart"
   main_panel_title: "Siempre es verano en alguna parte del mundo"

@@ -4,10 +4,10 @@
   <title>CRUSH by AC</title>
   <link rel="shortcut icon" href="/assets/sites/icon_header.jpg">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application'%>
   <%= csrf_meta_tags %>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= javascript_include_tag 'application'%>
 </head>
 <body>
   
@@ -21,8 +21,37 @@
   
   <div class="wrap">
   <%= yield %>
+  <a href="#" class="scrollup">Scroll</a>
   </div>
   <%= render partial: 'sites/footer' %>
+
+  <script>
+    $(document).ready(function () {
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+          $('.scrollup').fadeIn()
+        } else {
+          $('.scrollup').fadeOut()
+        }
+      });
+      $('.scrollup').click(function () {
+        $("html, body").animate({
+          scrollTop: 0
+        }, 600)
+        return false
+      })
+      $('a[href^="#value-proposition"]').on('click',function (event) {
+        event.preventDefault()
+        var target = this.hash
+        var $target = $(target)
+        $('html, body').stop().animate({
+          'scrollTop': $target.offset().top
+        }, 900, 'swing', function () {
+          window.location.hash = target
+       })
+      })
+    })
+  </script>
 
 </body>
 </html>

@@ -127,6 +127,19 @@ img[src="/assets/sites/logo-crush.jpg"]{
   }
 }
 
+.scrollup {
+  width: 1.8em;
+  height: 1.8em;
+  opacity: 0.5;
+  position: fixed;
+  bottom: 5em;
+  right: 100px;  
+  display: none;
+  text-indent: -9999px;
+  background: url('icon_top.png') no-repeat;
+  background-size: 100%;
+}
+
 footer{
   text-align:center;
   width: 100%;

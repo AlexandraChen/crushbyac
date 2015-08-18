@@ -9,7 +9,7 @@ body {
 }
 .navbar-menu{
   background: white;
-  height: 4.8em;
+  height: 6em;
   border: 0;
 }
 
@@ -18,12 +18,17 @@ body {
 }
 
 .menu-links{
-  vertical-align: midle;
+  margin-top: 0.8em;
+  background: white;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #4BBFEA;
 }
 
 img[src="assets/sites/logo-crush.jpg"]{
   width: auto;
-  height: 4em;
+  height: 5em;
 }
 
 .main-panel{
@@ -81,5 +86,23 @@ footer{
   p{
   color: #777;
   margin-top: 1.8em;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu-links{
+    text-align: right;
+    width: 11em;
+    float: right;
+    border:0;
+  };
+  div#bs-example-navbar-collapse-1 {
+    border: 0;
+  };
+  button.navbar-toggle {
+    margin-top: 1.4em;
+  };
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: #4BBFEA;
   }
 }

@@ -6,9 +6,11 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application'%>
   <%= csrf_meta_tags %>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  <div class="wrap">
+  
   <%= render partial: 'sites/navbar' %>
 
   <% if notice %>
@@ -16,10 +18,8 @@
   <% elsif %>
    <p class="alert"><%= alert %></p>
   <% end %>
-
-  <%= render partial: 'sites/main_panel' %>
-  <%= render partial: 'products/main_panel_products' %>
-    
+  
+  <div class="wrap">
   <%= yield %>
   </div>
   <%= render partial: 'sites/footer' %>

@@ -4,23 +4,22 @@
       <div class="product-pic">
         <%= image_tag @product.img.url, class: "product-img"%>
       </div>
- 
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-5 col-sm-offset-1">
       <div class="row">
        <% if current_user && current_user.admin  %>
         <p class="pull-right"><%= link_to t("edit_product"), edit_product_path(@product.id)  %><p>
       <% end %>
       <br>
+      <h3><strong><%= @product.title %></strong><span><p class="price pull-right">$<%= @product.price.to_i %></p></span></h3>
       <hr>
-      <h3><strong><%= @product.title %></strong></h3>
-      <p>$<%= @product.price.to_i %></p>
-      <p><%= t("size") %> <%= @product.size %></p>
+      <p class="size"><%= t("size") %> <%= @product.size %></p>
       <br>
       <p><%= @product.description %></p>
-      <button type="button" class="btn btn-default add-to-cart col-sm-10 col-sm-offset-1"><%= t("add_to_cart") %></button>
+      <br>
+      <button type="button" class="btn btn-default add-to-cart col-sm-10 col-sm-offset-1"><i class="fa fa-shopping-cart"></i> <%= t("add_to_cart") %></button>
+      <p class="show-delivery col-sm-10 col-sm-offset-1"><%= t("show_delivery") %></p>
       </div>
-      <hr>
     </div>
 
     </div>

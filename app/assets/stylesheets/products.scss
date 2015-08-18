@@ -1,6 +1,6 @@
-$crush-blue: #428bca;
+$crush-blue: #73afe0;
 $light-gray: #F9F9F9;
-
+$silver: #DDDDDD;
 .container.product-spacer{
   padding-top: 10em;
 }
@@ -17,10 +17,11 @@ $light-gray: #F9F9F9;
   color: white;
   background-color: $crush-blue;
   border: 0.5em solid $crush-blue;
-  margin-top: 50%;
+  margin-top: 30%;
   &:hover{
-    background-color: white;
+    background-color: $light-gray;
     color: $crush-blue;
+    font-weight: bold;
   }
 }
 
@@ -29,6 +30,16 @@ $light-gray: #F9F9F9;
   width: 26em;
   border: 0.5em solid $light-gray ;
   position: relative;
+}
+
+.size{
+  font-size: 1.5em;
+}
+
+.show-delivery{
+  font-size: 1em;
+  color: $silver;
+  text-align: center;
 }
 
 // .price{

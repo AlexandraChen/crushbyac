@@ -1,6 +1,7 @@
 $crush-blue: #73afe0;
 $crush-gray: #696769;
 $light-gray: #F9F9F9;
+$silver: #DDDDDD;
 
 *{
   font-family: Century Gothic, sans-serif;
@@ -14,7 +15,7 @@ html, body {
 .navbar-menu{
   background: white;
   height: 6em;
-  border-color: $crush-blue;
+  border-color: $silver;
 }
 
 .container-fluid{
@@ -151,11 +152,12 @@ img[src="/assets/sites/logo-crush.jpg"]{
 
 #location{
   margin-top: 2em;
-  >.container>.row>#where{
+  >.container>.row>#panel-title{
     color: $crush-blue;
     font-size: 5em;
   }
 }
+
 .address{
   margin-top: 10em;
   >p{
@@ -170,11 +172,43 @@ img[src="/assets/sites/logo-crush.jpg"]{
   margin-top: 2em;
 }
 
+#contact-us{
+  >.container>.row>#panel-title{
+    color: $light-gray;
+    font-size: 5em;
+    text-align: left;
+    margin: 0.5em 0 0.5em 0;
+  };
+  >.container>.row>p{
+    font-size: 2em;
+    color: $light-gray;
+    text-align: center;
+  };
+  >.container>.row>.contact-info{
+    margin-top: 1em;
+  }
+}
+
+button#email-us{
+  height: 3em;
+  font-size: 1.5em;
+  color: $crush-blue;
+  border-radius: 0;
+  border: 0.2em solid $silver;
+  margin-bottom: 4em;
+  &:hover{
+    background-color: $crush-blue;
+    color: $light-gray;
+    font-weight: bold;
+  }
+}
+
 footer{
   text-align:center;
   width: 100%;
   bottom: 0;
   height: 5em;
+  border-top: 0.2em solid $silver;
   background-color: $light-gray;
   p{
   color: #777;

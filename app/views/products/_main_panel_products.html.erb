@@ -2,7 +2,7 @@
   <div class="row">
     <% @products.each do |product| %>
       <div class="col-sm-4">
-        <a href="<%= product_path(product.id) %>" target="_blank">
+        <a href="<%= product_path(product.id) %>">
           <div class="site-product">
             <div class="price"> </div>
             <%= image_tag product.img.url(:medium)%>

@@ -1,0 +1,28 @@
+<div class="container product-spacer">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="product-pic">
+        <%= image_tag @product.img.url(:medium)%>
+      </div>
+ 
+    </div>
+    
+    <div class="col-sm-7 pro-details">
+      <div class="row">
+       <% if current_user && current_user.admin  %>
+        <p class="pull-right"><%= link_to "Edit product", edit_product_path(@product.id)  %><p>
+      <% end %>
+      <br>
+      <h3><%= @product.title %></h3>
+      <p>Size <%= @product.size %></p>
+      <p><%= @product.description %></p>
+      <p>$<%= @product.price.to_i %></p>
+      </div>
+    </div>
+
+    </div>
+  </div>
+</div>
+
+
+

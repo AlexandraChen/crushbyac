@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   end
 
   get "/admin/panel" => "users#admin_panel"
+  resources :products
 
 end

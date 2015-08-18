@@ -1,0 +1,22 @@
+<div class="container spacer">
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+    <h2>Edit product</h2>
+        <%= form_for @product, :url => { :action => "update" } do |f| %>
+          <%= f.label "Product picture" %>
+          <%= f.file_field :img %>
+          <%= f.label "Title" %>
+          <%= f.text_field :title, class: "form-control", placeholder:"title" %>
+          <%= f.label :description %>
+          <%= f.text_area :description, class: "form-control", placeholder: "Description"%>
+          <%= f.label "Price" %>
+          <%= f.number_field :price, class: "form-control", placeholder: :price %>
+          <%= f.label :size %>
+          <%= f.text_field :size, class: "form-control", placeholder: :size %>
+          <br>
+          <%= f.submit "Update product", class: "btn btn-default col-sm-12"%>
+        <% end %>
+ 
+    </div>
+  </div>
+</div>

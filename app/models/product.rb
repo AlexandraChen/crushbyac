@@ -8,8 +8,7 @@ class Product < ActiveRecord::Base
   has_attached_file :img,
       :styles => { 
         :medium => "336x336>",
-        :thumb => "100x100>", 
-        :small => "200x200#"  
+        :thumb => "100x100>"
       },
        :default_url => "no_pic.png"
   validates_attachment_content_type :img, :content_type => /\Aimage\/.*\Z/

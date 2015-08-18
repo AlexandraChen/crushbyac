@@ -1,5 +1,6 @@
 $crush-blue: #73afe0;
-$light-gray: #F9F9F9;;
+$crush-gray: #696769;
+$light-gray: #F9F9F9;
 
 *{
   font-family: Century Gothic, sans-serif;
@@ -127,6 +128,14 @@ img[src="/assets/sites/logo-crush.jpg"]{
   }
 }
 
+#contact-us{
+  height: auto;
+  width: 100%;
+  text-align: center;
+  background-color:$crush-blue;
+  margin-top: 5em;
+}
+
 .scrollup {
   width: 1.8em;
   height: 1.8em;
@@ -138,6 +147,27 @@ img[src="/assets/sites/logo-crush.jpg"]{
   text-indent: -9999px;
   background: url('icon_top.png') no-repeat;
   background-size: 100%;
+}
+
+#location{
+  margin-top: 2em;
+  >.container>.row>#where{
+    color: $crush-blue;
+    font-size: 5em;
+  }
+}
+.address{
+  margin-top: 10em;
+  >p{
+    color: $crush-gray;
+    font-size: 1.22em;
+  };
+}
+
+#googleMap{
+  height: 20em;
+  width: 32em;
+  margin-top: 2em;
 }
 
 footer{

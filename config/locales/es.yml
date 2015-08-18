@@ -32,6 +32,11 @@ es:
   what: "¿Qué hacemos?"
   how: "¿Cómo lo hacemos?"
   why: "¿Por qué lo hacemos?"
+  #LOCATION
+  location: "Ubicación"
+  where: "¿Dónde estamos?"
+  address: "El Cangrejo, Calle 49A Oeste, Edificio Minerva, Local D."
+  city: "Ciudad de Panamá, Panamá"
   #PRODUCTS
   product_new_success: "Producto agregado exitosamente"
   product_new_fail: "Faltan campos para crear el producto"

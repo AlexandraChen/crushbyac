@@ -27,6 +27,7 @@ gem 'devise'
 gem 'letter_opener'
 gem 'paperclip', '~> 4.3'
 gem 'twitter-bootstrap-rails'
+gem 'figaro'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -1,5 +1,5 @@
 class SitesController < ApplicationController
 	def index
-    @products = Product.all
+    @products = Product.order("created_at DESC")
 	end
 end

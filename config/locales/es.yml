@@ -32,6 +32,10 @@ es:
   what: "¿Qué hacemos?"
   how: "¿Cómo lo hacemos?"
   why: "¿Por qué lo hacemos?"
+  what_text: "Una colección única de piezas de vestir para la playa, accesorios y ropa deportiva. Sólo hay un modelo idéntico por diseño, ningun diseño se repite, y también hacemos pedidos personalizados y la medida. Si quieres saber cómo ordenar un diseño para ti, "
+  leave_msg: "déjanos un mensaje."
+  how_text: "Atendiendo a nuestros clientes con la mejor experencia de usuario personalizada. Teniendo un pensamiento de comercio justo y apoyando a lo local, estamos orgullosos que este producto es 100% hecho en Panamá. Colaboramos con mano de obra local y nuestra colección de trajes de baños nativo ayuda a una de las comunidades indígenas de Panamá."
+  why_text: "Porque sabemos que todos tenemos cuerpos diferentes, queremos sentirnos cómodos con lo que vestimos y siempre queremos lucir piezas especiales."
   #LOCATION
   location: "Ubicación"
   where: "¿Dónde estamos?"

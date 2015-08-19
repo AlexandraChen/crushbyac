@@ -6,11 +6,11 @@ class ProductsController < ApplicationController
   end
 
   def new
-    @product = current_user.products.new
+    @product = Product.new
   end
 
   def create
-    @product = current_user.products.new(product_params)
+    @product = Product.new(product_params)
     if @product.save
       redirect_to root_path, notice: I18n.t(:product_new_success)
     else

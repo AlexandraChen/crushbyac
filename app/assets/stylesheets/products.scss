@@ -4,7 +4,7 @@ $light-gray: #F9F9F9;
 $silver: #DDDDDD;
 
 .container.product-spacer{
-  padding-top: 10em;
+  padding-top: 5em;
 }
 
 .product-img{
@@ -28,7 +28,7 @@ $silver: #DDDDDD;
 }
 
 .site-product{
-  height: 26em;
+  height: 30em;
   width: 26em;
   border: 0.5em solid $light-gray ;
   position: relative;
@@ -44,9 +44,32 @@ $silver: #DDDDDD;
   text-align: center;
 }
 
-// .price{
-//   height: 4em;
-//   width: 4em;
-//   background-color: black;
+.product-details-index{
+  position: absolute;
+  z-index: 3;
+  height: 4em;
+  width: 100%;
+  background-color: $light-gray;
+  top:87.5%;
+  >p{
+    text-align: center;
+    color: $crush-blue;
+  };
+  >p#price-index{
+    font-weight: bold;
+    margin-top: -2%;
+  };
+  >p#title-index{
+    margin-top: 2%;
+  }
+}
 
-// }
+
+
+
+
+
+
+
+
+

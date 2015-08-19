@@ -1,17 +1,19 @@
 <div class="container spacer">
   <div class="row">
-    <% @products.each do |product| %>
-      <div class="col-sm-4">
-        <a href="<%= product_path(product.id) %>">
-          <div class="site-product">
-            <div class="product-details-index"> 
-              <p id="title-index"><%= product.title %></p>          
-              <p id="price-index">$<%= product.price.to_i %></p>
+    <% unless @products.empty? %>
+      <% @products.each do |product| %>
+        <div class="col-sm-4">
+          <a href="<%= product_path(product.id) %>">
+            <div class="site-product">
+              <div class="product-details-index"> 
+                <p id="title-index"><%= product.title %></p>          
+                <p id="price-index">$<%= product.price.to_i %></p>
+              </div>
+              <%= image_tag product.img.url(:medium)%>
             </div>
-            <%= image_tag product.img.url(:medium)%>
-          </div>
-        </a>
-      </div>
+          </a>
+        </div>
+      <% end %>
     <% end %>
   </div>
 </div>

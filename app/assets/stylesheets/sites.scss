@@ -108,8 +108,9 @@ img[src="/assets/sites/logo-crush.jpg"]{
   text-align: center;
   background-color:$crush-blue;
   margin-top: 5em;
+  padding-top: 5em;
   p.value-proposition-text{
-    padding: 0.8em 1.5em 4em 1.5em ;
+    padding: 0.8em 1.5em 6em 1.5em ;
     text-align: justify;
     color: $light-gray;
   }
@@ -135,6 +136,7 @@ img[src="/assets/sites/logo-crush.jpg"]{
   text-align: center;
   background-color:$crush-blue;
   margin-top: 5em;
+  padding-top: 5em;
 }
 
 .scrollup {
@@ -151,7 +153,8 @@ img[src="/assets/sites/logo-crush.jpg"]{
 }
 
 #location{
-  margin-top: 2em;
+  margin-top: 5em;
+  padding-top: 5em;
   >.container>.row>#panel-title{
     color: $crush-blue;
     font-size: 4em;
@@ -171,6 +174,7 @@ img[src="/assets/sites/logo-crush.jpg"]{
   height: 20em;
   width: 35em;
   margin-top: 2em;
+  margin-bottom: 6em;
 }
 
 #contact-us{
@@ -196,7 +200,7 @@ button#email-us{
   color: $crush-blue;
   border-radius: 0;
   border: 0.2em solid $silver;
-  margin-bottom: 3em;
+  margin-bottom: 5em;
   &:hover{
     background-color: $crush-blue;
     color: $light-gray;

@@ -17,8 +17,11 @@
       <br>
       <p><%= @product.description %></p>
       <br>
-      <button type="button" class="btn btn-default add-to-cart col-sm-10 col-sm-offset-1"><i class="fa fa-shopping-cart"></i> <%= t("add_to_cart") %></button>
-      <p class="show-delivery col-sm-10 col-sm-offset-1"><%= t("show_delivery") %></p>
+<!--       Add to cart button -->
+<!--       <button type="button" class="btn btn-default add-to-cart col-sm-10 col-sm-offset-1"><i class="fa fa-shopping-cart"></i> < t("add_to_cart") %></button>
+      <p class="show-delivery col-sm-10 col-sm-offset-1"><t("show_delivery") %></p> -->
+       <a href="mailto:info@crushbyac.com" target="_blank"><button type="button" class="btn btn-default add-to-cart col-sm-10 col-sm-offset-1"><%= t("email_us") %></button></a>
+      <p class="show-delivery col-sm-10 col-sm-offset-1"><%= t("email_order") %></p>
       </div>
     </div>
 

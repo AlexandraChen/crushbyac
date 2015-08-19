@@ -154,7 +154,7 @@ img[src="/assets/sites/logo-crush.jpg"]{
   margin-top: 2em;
   >.container>.row>#panel-title{
     color: $crush-blue;
-    font-size: 5em;
+    font-size: 4em;
     text-align: center;
   }
 }
@@ -176,7 +176,7 @@ img[src="/assets/sites/logo-crush.jpg"]{
 #contact-us{
   >.container>.row>#panel-title{
     color: $light-gray;
-    font-size: 5em;
+    font-size: 4em;
     text-align: center;
     margin: 0.5em 0 0.5em 0;
   };
@@ -196,7 +196,7 @@ button#email-us{
   color: $crush-blue;
   border-radius: 0;
   border: 0.2em solid $silver;
-  margin-bottom: 4em;
+  margin-bottom: 3em;
   &:hover{
     background-color: $crush-blue;
     color: $light-gray;

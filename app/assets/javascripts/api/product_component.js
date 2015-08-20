@@ -1,4 +1,3 @@
-
 var ProductComponent = function(collection){
   this.collection = collection
 }
@@ -23,34 +22,4 @@ ProductComponent.prototype.render = function(){
       $(".row.all-products").append(component.template(product))
     })
   }
-}
-
-var ProductsCollection = function(){
-  this.products = []
-  this.url = "api/products/?utf8=%E2%9C%93&search="
-}
-
-ProductsCollection.prototype.fetch = function(query, callback){
-  var request = $.get(this.url + query)
-  var collection = this
-  request.done(function(result){
-    collection.products = result
-    callback();
-  })
-}
-
-var Router = function (){ 
-  this.listener()
-  this.collection = new ProductsCollection()
-  this.ProductComponent = new ProductComponent(this.collection)
-}
-
-Router.prototype.listener = function (){
-  var router = this
-  $("#search").on('keyup', function (){
-    var query = $(event.currentTarget).val()
-    router.collection.fetch(query, function () {
-      router.ProductComponent.render();
-    })
-  })
 }

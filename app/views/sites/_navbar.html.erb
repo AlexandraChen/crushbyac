@@ -26,9 +26,13 @@
             <div><i class="fa fa-twitter"></i></div>
           </a>
         </li>
-        <li><a href="#value-proposition"><%= t("why_crush") %></a></li>
-        <li><a href="#location"> <%= t("location") %></a></li>
-        <li><a href="#contact-us"> <%= t("contact") %></a></li>
+        <% if current_page?("/") %>
+          <li><a href="#value-proposition"><%= t("why_crush") %></a></li>
+          <li><a href="#location"> <%= t("location") %></a></li>
+          <li><a href="#contact-us"> <%= t("contact") %></a></li>
+        <% else %>
+          <li><a href="mailto:info@crushbyac.com" target="_blank"> <%= t("contact") %></a></li>
+        <% end %>
 <!--         <li><a href="#"><i class="fa fa-shopping-cart"></i> <t("cart") %></a></li> -->
       </ul>
      </div>

@@ -10,4 +10,8 @@ Rails.application.routes.draw do
   get "/admin/panel" => "users#admin_panel"
   resources :products
 
+  namespace :api, defaults: { format: :json } do
+    resources :products, only: [:index]
+  end
+
 end

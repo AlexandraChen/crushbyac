@@ -1,6 +1,6 @@
 <div class="container spacer">
   <div class="row all-products">
-    <% unless @products.empty? %>
+    <% unless @products.empty?  %>
       <% @products.each do |product| %>
         <div class="col-sm-4">
           <a href="<%= product_path(product.id) %>">

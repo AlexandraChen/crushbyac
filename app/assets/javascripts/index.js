@@ -23,4 +23,8 @@ $(document).ready(function () {
    })
   })
 
+  setTimeout(function() {
+    $("#notice, #alert").fadeOut().empty();
+  }, 5000);
+
 })

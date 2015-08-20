@@ -18,32 +18,27 @@
       };
       var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
       var marker = new google.maps.Marker({
-              position: mapProp.center,
-              map: map,
-              title: 'Crush location'
-            });
+        position: mapProp.center,
+        map: map,
+        title: 'Crush location'
+      });
     }
     google.maps.event.addDomListener(window, 'load', initialize);
   </script>
 </head>
 <body>
-  
   <%= render partial: 'sites/navbar' %>
-
   <% if notice %>
-	 <p class="notice"><%= notice %></p>
-  <% elsif %>
-   <p class="alert"><%= alert %></p>
+    <div id="notice"><p><%= notice %></p></div>
+  <% elsif alert %>
+    <div id="alert"><p><%= alert %></p></div>
   <% end %>
   
   <div class="wrap">
-  <%= yield %>
-  <a href="#" class="scrollup">Scroll</a>
+    <%= yield %>
+    <a href="#" class="scrollup">Scroll</a>
   </div>
   <%= render partial: 'sites/footer' %>
-
-  
-
 </body>
 </html>
 

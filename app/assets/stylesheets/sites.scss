@@ -53,6 +53,33 @@ img[src="/assets/sites/logo-crush.jpg"]{
   height: 5em;
 }
 
+#notice, #alert{
+  height: 3em;
+  width: 100%;
+  margin-top: 1em;
+  z-index: 9999;
+  position: absolute;
+  text-align: center;
+}
+
+#notice{
+  border: 0.2em solid green;
+  background-color: #C2E7AE;
+  color: green;
+  >p{
+    margin-top: 0.5em;
+  }
+}
+
+#alert{
+  border: 0.2em solid #AF0001;
+  background-color: #E7ADBB;
+  color: #AF0001;
+  >p{
+    margin-top: 0.5em;
+  }
+}
+
 .main-panel{
   height: 45em;
   width: 100%;

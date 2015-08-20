@@ -28,7 +28,7 @@ class ProductsController < ApplicationController
     @product.update_attributes(product_params)
     if @product.valid?
       @product.save
-      redirect_to product_path(@product.id), notice: I18n.t(:product_update_success)
+      redirect_to admin_panel_path, notice: I18n.t(:product_update_success)
       return
     end
     flash[:notice] = I18n.t(:product_new_fail)

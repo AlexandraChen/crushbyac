@@ -83,12 +83,14 @@ img[src="/assets/sites/logo-crush.jpg"]{
       weight: bold;
     };
     text-align: center;
+    text-shadow: 0.5px 0.5px 0.5px #000000;
   };
   #panel-slogan{
     margin-top: -1em;
     font-size: 1.5em;
     width: 100%;
-     text-align: right;
+    text-align: right;
+    text-shadow: 0.5px 0.5px 0.5px #000000;
   }
 }
 

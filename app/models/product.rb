@@ -13,4 +13,10 @@ class Product < ActiveRecord::Base
        :default_url => "no_pic.png"
   validates_attachment_content_type :img, :content_type => /\Aimage\/.*\Z/
   validates_attachment_presence :img
+
+
+  def self.search(query)
+    where("lower(title) LIKE ? OR lower(tags) LIKE ? OR lower(description) LIKE ? OR lower(size) like ?", 
+      "%#{query}%".downcase, "%#{query}%".downcase, "%#{query}%".downcase, "%#{query}%".downcase)
+  end
 end

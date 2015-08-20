@@ -1,5 +1,13 @@
   <%= render partial: 'sites/main_panel' %>
+ 
+  <div class="col-sm-8 col-sm-offset-2">
+    <%= form_tag(root_path, :method => "get", id: "search-form", role: "search") do %>
+      <%= text_field_tag :search, params[:search], class:"form-control search-query", placeholder: t("search_query") %>
+    <% end %>
+  </div>
+
   <%= render partial: 'products/main_panel_products' %>
+
 <div class="container">
   <div class="row">
     <div class="col-sm-12">  

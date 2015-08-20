@@ -14,7 +14,7 @@
                   <p id="price-index">$<%= product.discount %></p>
                 <% end %>
               </div>
-              <%= image_tag product.img.url(:medium)%>
+              <%= image_tag product.img.url, class: "product-img"%>
             </div>
           </a>
           <br>

@@ -6,8 +6,13 @@
           <a href="<%= product_path(product.id) %>">
             <div class="site-product">
               <div class="product-details-index"> 
-                <p id="title-index"><%= product.title %></p>          
-                <p id="price-index">$<%= product.price.to_i %></p>
+                <p id="title-index"><%= product.title %></p>
+                <% if product.discount === nil %>           
+                  <p id="price-index">$<%= product.price.to_i %></p>
+                <% else %>
+                  <p class="discounted" id="price-index"> Antes $<%= product.price.to_i %></p>
+                  <p id="price-index">$<%= product.discount %></p>
+                <% end %>
               </div>
               <%= image_tag product.img.url(:medium)%>
             </div>

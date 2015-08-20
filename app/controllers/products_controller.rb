@@ -12,7 +12,7 @@ class ProductsController < ApplicationController
   def create
     @product = current_user.products.new(product_params)
     if @product.save
-      redirect_to root_path, notice: I18n.t(:product_new_success)
+      redirect_to admin_panel_path, notice: I18n.t(:product_new_success)
     else
       flash[:notice] = I18n.t(:product_new_fail)
       render :new

@@ -4,6 +4,7 @@
   <%= form_tag(root_path, :method => "get", id: "search-form", role: "search") do %>
     <%= text_field_tag :search, params[:search], class:"form-control search-query", placeholder: t("search_query") %>
   <% end %>
+  </form>
 </div>
 
 <%= render partial: 'products/main_panel_products' %>

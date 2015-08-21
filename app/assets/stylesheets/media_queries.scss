@@ -29,4 +29,21 @@
   .headlines p#panel-slogan{
     font-size: 1em;
   };
+  p.description{
+    margin: 0 2em 0 2em;
+    text-align: justify;
+  };
+  p.size, h3.product-title{
+    margin-left: 1em;
+  };
+  p.price{
+    margin-right: 1em;
+  };
+  img.product-img {
+    margin-top: 2em;
+  }
+  button.btn.btn-default.add-to-cart{
+    margin-top: 2em;
+    width: 100%;
+  }
 }

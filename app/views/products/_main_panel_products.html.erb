@@ -2,12 +2,12 @@
   <div class="row all-products">
     <% unless @products.empty?  %>
       <% @products.each do |product| %>
-        <div class="col-sm-4">
+        <div class="col-sm-4 product-wrapper">
           <a href="<%= product_path(product.id) %>">
             <div class="site-product">
               <div class="product-details-index"> 
                 <p id="title-index"><%= product.title %></p>
-                <% if product.discount === nil %>           
+                <% if product.discount == nil %>           
                   <p id="price-index">$<%= product.price.to_i %></p>
                 <% else %>
                   <p class="discount" id="price-index"> <%= t("was_sale") %> $<%= product.price.to_i %></p>

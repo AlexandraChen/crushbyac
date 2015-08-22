@@ -1,9 +1,5 @@
 class SitesController < ApplicationController
 	def index
-    if params[:search]
-      @products = Product.search(params[:search]).all
-    else
-      @products = Product.all
-    end
+    @products = Product.all.shuffle[0..Product.all.size]
 	end
 end

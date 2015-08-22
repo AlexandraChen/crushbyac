@@ -1,9 +1,9 @@
 class SitesController < ApplicationController
 	def index
     if params[:search]
-      @products = Product.search(params[:search]).order("created_at DESC")
+      @products = Product.search(params[:search]).all
     else
-      @products = Product.order("created_at DESC")
+      @products = Product.all
     end
 	end
 end

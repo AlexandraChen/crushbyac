@@ -27,9 +27,9 @@ $(document).ready(function () {
     $("#notice, #alert").fadeOut().empty();
   }, 5000);
 
-  // $('#search-form').on("submit",function(event){
-  //   event.preventDefault()
-  // })
+  $('#search-form').on("submit",function(event){
+    event.preventDefault()
+  })
 
 })
 

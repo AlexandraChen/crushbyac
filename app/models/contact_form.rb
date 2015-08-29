@@ -4,6 +4,8 @@ class ContactForm < MailForm::Base
   attribute :file,      :attachment => true
   attribute :message
   attribute :nickname,  :captcha  => true
+  validates :email, presence: true
+  validates :message, presence: true
 
   def headers
     {

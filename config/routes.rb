@@ -18,6 +18,6 @@ Rails.application.routes.draw do
     resources :products, only: [:index]
   end
 
-  resources :contact_forms
+  resources :contact_forms, only: [:new, :create]
 
 end

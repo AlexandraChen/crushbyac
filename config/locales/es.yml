@@ -45,7 +45,7 @@ es:
   contact_us: "Contáctanos"
   email_us: "Enviar mensaje"
   email_success: "Tu mensaje ha sido enviado exitosamente. Te estaremos contactando pronto."
-  fill_fields: "Por favor, llena todos los espacios."
+  fill_fields: "Por favor, llena todos los espacios y asegúrate que tu email tenga el formato correcto."
   #PRODUCTS
   search_query: "Busca por piezas, estilos, diseño, talla, material, etc."
   product_new_success: "Producto agregado exitosamente"

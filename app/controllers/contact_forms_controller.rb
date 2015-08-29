@@ -7,9 +7,9 @@ class ContactFormsController < ApplicationController
     @contact_form = ContactForm.new(params[:contact_form])
     @contact_form.request = request
     if @contact_form.deliver
-      redirect_to root_path, notice: "Message was successfully sent."
+      redirect_to root_path, notice: I18n.t(:email_success)
     else
-      flash.now[:alert] = 'Please fill all the fields!'
+      flash.now[:alert] = I18n.t(:fill_fields)
     end
   end
 end

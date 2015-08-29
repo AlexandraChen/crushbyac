@@ -1,0 +1,9 @@
+<div id ="contact-form">
+  <%= form_for @contact_form do |f|  %> 
+    <%= f.text_field  :name, :required => false, class: "form-control col-sm-10 contact-form-field", placeholder: "Nombre"  %> 
+    <%= f.text_field  :email, :required => false, class: "form-control col-sm-10 contact-form-field", placeholder: "Email"  %> 
+    <%= f.text_area  :message, :as => :text, :required => false, class: "form-control col-sm-10 contact-form-field", placeholder: "Mensaje" %>
+    <%= f.hidden_field :nickname, :hint => 'Leave this field blank!'  %>
+    <%= f.submit t("email_us"), class: "btn btn-default col-sm-8 col-sm-offset-2", id: "email-us"%>
+  <% end %>
+</div>

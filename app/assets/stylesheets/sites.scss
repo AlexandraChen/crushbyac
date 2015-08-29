@@ -215,27 +215,30 @@ img[src="/assets/sites/logo-crush.jpg"]{
 }
 
 #contact-us{
-  >.container>.row>#panel-title{
+  #panel-title{
     color: $light-gray;
     font-size: 4em;
     text-align: center;
     margin: 0.5em 0 0.5em 0;
   };
-  >.container>.row>p{
+  #contact-info{
     font-size: 2em;
     color: $light-gray;
     text-align: center;
   };
-  >.container>.row>.contact-info{
+  .email-cell{
+    margin-top: 3em;
+  }
+  #contact-form{
     margin-top: 1em;
   }
 }
 
-button#email-us{
+#email-us{
   height: 3em;
   font-size: 1.5em;
   color: $crush-blue;
-  border-radius: 0;
+  // border-radius: 0;
   border: 0.2em solid $silver;
   margin-bottom: 5em;
   &:hover{
@@ -243,6 +246,10 @@ button#email-us{
     color: $light-gray;
     font-weight: bold;
   }
+}
+
+.contact-form-field{
+  margin-bottom: 1em;
 }
 
 footer{

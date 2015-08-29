@@ -31,6 +31,7 @@ gem 'figaro'
 gem 'aws-sdk', '< 2.0'
 gem 'taps'
 gem 'awesome_print'
+gem 'mail_form'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

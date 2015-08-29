@@ -2,9 +2,13 @@
   <div class="container">
     <div class="row">
       <p id="panel-title"><%= t("contact_us") %> </p>
-      <p><i class="fa fa-envelope"></i> info@crushbyac.com</p>
-      <p><i class="fa fa-phone"></i> +507 6884-9577 </p>
-      <a href="mailto:info@crushbyac.com" target="_blank"><button type="button" class="btn btn-default col-sm-4 col-sm-offset-4" id="email-us"><%= t("email_us") %></button></a>
+      <div class="col-sm-6 email-cell">
+        <p id="contact-info"><i class="fa fa-envelope"></i> info@crushbyac.com</p>
+        <p id="contact-info"><i class="fa fa-phone"></i> +507 6884-9577 </p>
+      </div>
+      <div class="col-sm-6">
+        <%= render partial: 'contact_forms/new'  %>
+      </div>
     </div>
   </div>
 </div>

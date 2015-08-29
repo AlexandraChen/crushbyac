@@ -43,7 +43,7 @@ es:
   city: "Ciudad de Panamá, Panamá"
   #CONTACT US
   contact_us: "Contáctanos"
-  email_us: "Déjanos un mensaje"
+  email_us: "Enviar mensaje"
   #PRODUCTS
   search_query: "Busca por piezas, estilos, diseño, talla, material, etc."
   product_new_success: "Producto agregado exitosamente"

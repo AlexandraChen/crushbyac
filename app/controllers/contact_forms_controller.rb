@@ -9,7 +9,7 @@ class ContactFormsController < ApplicationController
     if @contact_form.deliver
       redirect_to root_path, notice: I18n.t(:email_success)
     else
-      flash.now[:alert] = I18n.t(:fill_fields)
+      redirect_to root_path, alert: I18n.t(:fill_fields)
     end
   end
 end

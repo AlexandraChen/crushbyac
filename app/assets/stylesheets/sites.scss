@@ -56,7 +56,7 @@ img[src="/assets/sites/logo-crush.jpg"]{
 #notice, #alert{
   height: 3em;
   width: 100%;
-  margin-top: 1em;
+  margin-top: 6em;
   z-index: 9999;
   position: absolute;
   text-align: center;
@@ -81,10 +81,9 @@ img[src="/assets/sites/logo-crush.jpg"]{
 }
 
 .main-panel{
-  height: 45em;
+  height: 40em;
   width: 100%;
   background: url("/assets/sites/sanblas.jpg") no-repeat;
-  margin-top: -7em;
   background-size: cover;
 }
 

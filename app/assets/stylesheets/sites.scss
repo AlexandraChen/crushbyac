@@ -258,8 +258,11 @@ footer{
   height: 5em;
   border-top: 0.2em solid $silver;
   background-color: $light-gray;
-  p{
+  p,a{
   color: #777;
   margin-top: 1.8em;
+  }; 
+  a:hover{
+    text-decoration: none;
   }
 }

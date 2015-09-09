@@ -255,14 +255,66 @@ footer{
   text-align:center;
   width: 100%;
   bottom: 0;
-  height: 5em;
+  height: auto;
   border-top: 0.2em solid $silver;
   background-color: $light-gray;
-  p,a{
+  p#footer-sign{
   color: #777;
   margin-top: 1.8em;
+  width: 100%;
+  font-weight: bold;
   }; 
   a:hover{
     text-decoration: none;
+  };
+  ul{
+    list-style-type: none;
+  }
+  .footer-links{
+    padding-top: 1em;
+    >div>ul>li{
+      color: silver;
+      text-align: left;
+      font-size: 0.9em;
+      >a{
+        color: silver;
+      };
+      >a:hover{
+        color: $crush-blue;
+      }
+    }
   }
 }
+
+.faq-terms{
+  margin-bottom: 4.5em;
+  margin-top: 2.5em;
+  color: gray;
+  >p, >h5{
+    color: gray;
+    text-align: justify;
+  };
+  >h5, >h4{
+    font-weight: bold;
+  };
+  >h4{
+    margin-top: 1.5em;
+  }
+  >h3{
+    color: $crush-blue;
+    font-weight: bold;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

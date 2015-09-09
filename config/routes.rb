@@ -22,5 +22,7 @@ Rails.application.routes.draw do
 
   get "/contact" => "sites#contact_us"
   get "/location" => "sites#location"
+  get "/faq" => "sites#faq"
+  get "/terms_and_conditions" => "sites#terms_and_conditions"
 
 end

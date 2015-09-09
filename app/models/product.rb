@@ -7,7 +7,7 @@ class Product < ActiveRecord::Base
   validates :size, presence: true
   has_attached_file :img,
       :styles => { 
-        :medium => "336x336>",
+        :medium => "450x450>",
         :thumb => "100x100>"
       },
        :default_url => "no_pic.png"

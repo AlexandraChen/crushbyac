@@ -26,6 +26,10 @@ $(document).ready(function () {
   setTimeout(function() {
     $("#notice, #alert").fadeOut().empty();
   }, 5000);
+  
+  $("#notice, #alert").on("click",function(){
+    $(this).fadeOut();
+   })
 
   $('#search-form').on("submit",function(event){
     event.preventDefault()

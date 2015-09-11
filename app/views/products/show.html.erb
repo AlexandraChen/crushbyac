@@ -11,7 +11,18 @@
         <p class="pull-right"><%= link_to t("edit_product"), edit_product_path(@product.id)  %><p>
       <% end %>
       <br>
-      <h3 class="product-title"><strong><%= @product.title %></strong><span><p class="price pull-right">$<%= @product.price.to_i %></p></span></h3>
+      <h3 class="product-title"><strong><%= @product.title %></strong>
+      <span> 
+        <% if @product.discount == nil %>
+          <p class="price pull-right">$<%= @product.price.to_i %></p>
+          </h3>
+        <% else %>
+          <p class="price pull-right"><strong> $<%= @product.discount.to_i %></strong> </p>
+          </h3>
+          <p class="price pull-right"> Antes $<%= @product.price.to_i %> </p>
+          <br>
+        <% end %>
+      </span>
       <hr>
       <p class="size"><%= t("size") %> <%= @product.size %></p>
       <br>

@@ -35,5 +35,21 @@ $(document).ready(function () {
     event.preventDefault()
   })
 
+   $('body').bind('mousewheel', function(e){
+    if(e.originalEvent.wheelDelta < 0) {
+        userScrollDown()
+    } else {
+        userScrollUp()
+    }
+  })
+
+  function userScrollDown() {
+    $('.navbar').css('top', '-103px')
+  }
+
+  function userScrollUp() {
+    $('.navbar').css('top', '0')
+  }
+
 })
 

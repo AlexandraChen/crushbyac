@@ -6,7 +6,7 @@
 
     <div class="col-sm-6">
     <h4> Published <h4>
-      <% @admin.products.each do |product| %>
+      <% @products.each do |product| %>
         <% if product.published == true %>
           <li><%= image_tag product.img.url(:thumb)%>
             ID <%= product.id %> | <%= link_to product.title, product_path(product.id) %> | <%= link_to t("edit_product"), edit_product_path(product.id) %>
@@ -16,7 +16,7 @@
     </div>
     <div class="col-sm-6">
     <h4> Unpublished <h4>
-      <% @admin.products.each do |product| %>
+      <% @products.each do |product| %>
         <% if product.published != true %>
           <li><%= image_tag product.img.url(:thumb)%>
             ID <%= product.id %> | <%= link_to product.title, product_path(product.id) %> | <%= link_to t("edit_product"), edit_product_path(product.id) %>

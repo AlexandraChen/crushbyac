@@ -4,9 +4,25 @@
     <p><%= link_to t("log_out"), '/logout' %></p>
     <p><%= link_to t("add_product"), new_product_path %></p>
 
-    <% @admin.products.each do |product| %>
-      <li><%= image_tag product.img.url(:thumb)%>
-      <%= link_to product.title, product_path(product.id) %> | <%= link_to t("edit_product"), edit_product_path(product.id) %></li> 
-    <% end %>
+    <div class="col-sm-6">
+    <h4> Published <h4>
+      <% @admin.products.each do |product| %>
+        <% if product.published == true %>
+          <li><%= image_tag product.img.url(:thumb)%>
+            ID <%= product.id %> | <%= link_to product.title, product_path(product.id) %> | <%= link_to t("edit_product"), edit_product_path(product.id) %>
+          </li> 
+        <% end %>
+      <% end %>
+    </div>
+    <div class="col-sm-6">
+    <h4> Unpublished <h4>
+      <% @admin.products.each do |product| %>
+        <% if product.published != true %>
+          <li><%= image_tag product.img.url(:thumb)%>
+            ID <%= product.id %> | <%= link_to product.title, product_path(product.id) %> | <%= link_to t("edit_product"), edit_product_path(product.id) %>
+          </li> 
+        <% end %>
+      <% end %>
+    </div>
   </div>
 </div>

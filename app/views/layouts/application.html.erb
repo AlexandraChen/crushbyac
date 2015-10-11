@@ -29,9 +29,9 @@
 <body>
   <%= render partial: 'sites/navbar' %>
   <% if notice %>
-    <div id="notice"><p><%= notice %></p></div>
+    <div id="notice"><p><%= notice %> <strong>[x]</strong> </p></div>
   <% elsif alert %>
-    <div id="alert"><p><%= alert %></p></div>
+    <div id="alert"><p><%= alert %> <strong>[x]</strong> </p></div>
   <% end %>
   
   <div class="wrap">

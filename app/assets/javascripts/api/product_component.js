@@ -4,17 +4,14 @@ var ProductComponent = function(collection){
 
 ProductComponent.prototype.template = function(product){
   var products = "products/"
-  var productTemplate = "<div class='col-sm-4 product-wrapper'><a href="+ products + product.id 
-                        + "><div class='site-product'><div class='product-details-index'><p id='title-index'>"
-                        + product.title + "</p>" 
+  var productTemplate = "<div class='col-sm-4 product-wrapper'><a href="+ products + product.id + "><div class='site-product'><div class='product-details-index'><p id='title-index'>" + product.title + "</p>" 
   if(product.discount == null){
     productTemplate += "<p id='price-index'>$" + parseInt(product.price) + "</p></div>" 
   } 
   else {
-    productTemplate += "<p class='discount' id='price-index'> Antes $" + parseInt(product.price) + "</p>" 
-                        + "<p id='price-index'>$" + parseInt(product.discount) + "</p></div>"          
+    productTemplate += "<p class='discount' id='price-index'> Antes $" + parseInt(product.price) + "</p>" + "<p id='price-index'>$" + parseInt(product.discount) + "</p></div>"          
   }
-  productTemplate +=   "<img class='product-img' src=" + product.image_url + "></a></div><br>" 
+  productTemplate += "<img class='product-img' src=" + product.image_url + "></a></div><br>" 
   return productTemplate
 }
 ProductComponent.prototype.render = function(){

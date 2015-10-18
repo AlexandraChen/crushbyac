@@ -43,13 +43,14 @@ $(document).ready(function () {
     }
   })
 
-  function userScrollDown() {
-    $('.navbar').css('top', '-103px')
-  }
+  // nav bar hide an show
+  // function userScrollDown() {
+  //   $('.navbar').css('top', '-103px')
+  // }
 
-  function userScrollUp() {
-    $('.navbar').css('top', '0')
-  }
+  // function userScrollUp() {
+  //   $('.navbar').css('top', '0')
+  // }
 
 })
 

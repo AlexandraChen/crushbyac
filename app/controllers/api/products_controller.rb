@@ -3,12 +3,7 @@ class Api::ProductsController < ApplicationController
 
   def index
     if params[:search]
-      @products = []
-      Product.search(params[:search]).all.each do |x|
-        if x.published == true
-          @products << x
-        end
-      end
+      @products = Product.search(params[:search]).all
     end
     render :index
   end

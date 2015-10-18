@@ -2,10 +2,14 @@
   <div class="row all-products">
     <% unless @products.empty?  %>
       <% @products.each do |product| %>
-        <% if product.published == true %>
           <div class="col-sm-4 product-wrapper">
             <a href="<%= product_path(product.id) %>">
-              <div class="site-product">
+              <div class="site-product">   
+              <% if product.published == false %>
+                <div class ="soldout-banner">
+                </div> 
+                <p id="soldout">Sold out</p>
+              <% end %>
                 <div class="product-details-index"> 
                   <p id="title-index"><%= product.title %></p>
                   <% if product.discount == nil %>           
@@ -20,7 +24,7 @@
             </a>
             <br>
           </div>
-        <% end %>
+
       <% end %>
     <% end %>
   </div>

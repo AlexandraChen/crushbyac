@@ -4,7 +4,11 @@ var ProductComponent = function(collection){
 
 ProductComponent.prototype.template = function(product){
   var products = "products/"
-  var productTemplate = "<div class='col-sm-4 product-wrapper'><a href="+ products + product.id + "><div class='site-product'><div class='product-details-index'><p id='title-index'>" + product.title + "</p>" 
+  var productTemplate = "<div class='col-sm-4 product-wrapper'><a href="+ products + product.id + "><div class='site-product'>"
+  if(product.published == false){
+    productTemplate += "<div class ='soldout-banner'></div><p id='soldout'>Sold out</p>"
+  }
+  productTemplate += "<div class='product-details-index'><p id='title-index'>" + product.title + "</p>" 
   if(product.discount == null){
     productTemplate += "<p id='price-index'>$" + parseInt(product.price) + "</p></div>" 
   } 

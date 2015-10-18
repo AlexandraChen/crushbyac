@@ -4,6 +4,7 @@ json.array! @products.each do |product|
   json.price product.price
   json.image_url product.img.url
   json.id product.id
+  json.published product.published
   json.description product.description
   json.categories product.categories
   json.tags product.tags

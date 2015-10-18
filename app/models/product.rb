@@ -14,9 +14,6 @@ class Product < ActiveRecord::Base
   validates_attachment_content_type :img, :content_type => /\Aimage\/.*\Z/
   validates_attachment_presence :img
 
-
-  def self.search(query)
-    where("lower(title) LIKE ? OR lower(tags) LIKE ? OR lower(description) LIKE ? OR lower(size) LIKE ? OR lower(categories) LIKE ?", 
-      "%#{query}%".downcase, "%#{query}%".downcase, "%#{query}%".downcase, "%#{query}%".downcase, "%#{query}%".downcase)
-  end
+  scope :search, -> query { where("lower(title) LIKE ? OR lower(tags) LIKE ? OR lower(description) LIKE ? OR lower(size) LIKE ? OR lower(categories) LIKE ?", 
+      "%#{query}%".downcase, "%#{query}%".downcase, "%#{query}%".downcase, "%#{query}%".downcase, "%#{query}%".downcase) }
 end

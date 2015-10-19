@@ -1,11 +1,16 @@
 <div class="container product-spacer">
   <div class="row">
-    <div class="col-sm-6">
+    <div class="col-sm-5">
       <div class="product-pic">
+            <% if @product.published == false %>
+          <div class ="soldout-banner">
+          </div> 
+          <p id="soldout">Sold out</p>
+      <% end %>
         <%= image_tag @product.img.url, class: "product-img"%>
       </div>
     </div>
-    <div class="col-sm-5">
+    <div class="col-sm-5 col-sm-offset-1">
       <div class="row">
        <% if current_user && current_user.admin  %>
         <p class="pull-right"><%= link_to t("edit_product"), edit_product_path(@product.id)  %><p>

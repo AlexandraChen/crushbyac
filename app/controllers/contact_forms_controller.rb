@@ -7,9 +7,9 @@ class ContactFormsController < ApplicationController
     @contact_form = ContactForm.new(params[:contact_form])
     @contact_form.request = request
     if @contact_form.deliver
-      redirect_to root_path, notice: I18n.t(:email_success)
+      redirect_to :back, notice: I18n.t(:email_success)
     else
-      redirect_to root_path, alert: I18n.t(:fill_fields)
+      redirect_to :back, alert: I18n.t(:fill_fields)
     end
   end
 end

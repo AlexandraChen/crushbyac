@@ -3,6 +3,7 @@ class ProductsController < ApplicationController
 	# before_action :current_user.admin, only: [:new, :create, :update]
   def show
     @product = Product.find(params[:id])
+    @contact_form = ContactForm.new
   end
 
   def new

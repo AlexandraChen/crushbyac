@@ -9,7 +9,7 @@ class ContactForm < MailForm::Base
 
   def headers
     {
-      :subject => "Consulta",
+      :subject => "Contact: " + URI(request.referer).path,
       :to => "crushalexandrachen@gmail.com",
       :from => %("#{name}" <#{email}>)
     }

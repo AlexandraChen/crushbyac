@@ -12,7 +12,7 @@ $(document).ready(function () {
     }, 900)
     return false
   })
-  $('a[href^="#value-proposition"], a[href^="#location"], a[href^="#contact-us"]').on('click',function (event) {
+  $('a[href^="#value-proposition"], a[href^="#location"], a[href^="#contact-us"],a[href^="#contact-product"]').on('click',function (event) {
     event.preventDefault()
     var target = this.hash
     var $target = $(target)

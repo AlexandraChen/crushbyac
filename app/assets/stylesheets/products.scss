@@ -74,20 +74,13 @@ $silver: #DDDDDD;
   border-left: 60px solid transparent;
   border-right: 0px solid transparent;
   border-top: 60px solid $crush-blue;
-  position: absolute;
-  z-index: 5;
-  right: 0;
   opacity: 0.6;
 }
 
 
 #soldout{
-  color:white;
-  position: absolute;
-  z-index: 6;
   right: 0;
   text-align: right;
-  font-weight: bold;
   margin-top: 1em;
   -webkit-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
@@ -95,6 +88,32 @@ $silver: #DDDDDD;
   -o-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+.soldout-banner, .sale-banner{
+  position: absolute;
+  z-index: 5;
+  right: 0;
+}
+
+#soldout, #sale{
+  color:white;
+  position: absolute;
+  z-index: 6;
+  font-weight: bold;
+}
+
+.sale-banner {
+  width: 4em; 
+  height: 4em;
+  border-radius: 50%;
+  background-color: $crush-blue;
+  opacity: 0.6;
+}
+
+#sale{
+  right: 22%;
+  margin-top: 1.4em;
 }
 
 

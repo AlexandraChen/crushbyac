@@ -16,4 +16,8 @@ class Product < ActiveRecord::Base
 
   scope :search, -> query { where("lower(title) LIKE ? OR lower(tags) LIKE ? OR lower(description) LIKE ? OR lower(size) LIKE ? OR lower(categories) LIKE ?", 
       "%#{query}%".downcase, "%#{query}%".downcase, "%#{query}%".downcase, "%#{query}%".downcase, "%#{query}%".downcase) }
+
+  def self.recent
+    all.order("created_at DESC")
+  end
 end

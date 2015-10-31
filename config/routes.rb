@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
 
-  get "contact_form/new"
-
-  get "contact_form/create"
-
   devise_for :users
   root "sites#index"
   devise_scope :user do
@@ -20,9 +16,9 @@ Rails.application.routes.draw do
 
   resources :contact_forms, only: [:new, :create]
 
-  get "/contact" => "sites#contact_us"
-  get "/location" => "sites#location"
-  get "/faq" => "sites#faq"
+  get "/contact"              => "sites#contact_us"
+  get "/location"             => "sites#location"
+  get "/faq"                  => "sites#faq"
   get "/terms_and_conditions" => "sites#terms_and_conditions"
 
 end

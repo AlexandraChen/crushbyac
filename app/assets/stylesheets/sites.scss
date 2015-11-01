@@ -163,11 +163,10 @@ img[src="/assets/sites/logo-crush.jpg"]{
 }
 
 #contact-us{
-  height: auto;
   width: 100%;
   text-align: center;
   background-color:$crush-blue;
-  padding-top: 3em;
+  padding-top: 10em;
 }
 
 #leave-msg{
@@ -188,8 +187,7 @@ img[src="/assets/sites/logo-crush.jpg"]{
 }
 
 #location{
-  margin-top: 5em;
-  padding-top: 5em;
+  padding-top: 10em;
   >.container>.row>#panel-title{
     color: $crush-blue;
     font-size: 4em;
@@ -213,6 +211,7 @@ img[src="/assets/sites/logo-crush.jpg"]{
 }
 
 #contact-us{
+  padding-top: 10em;
   #panel-title{
     color: $light-gray;
     font-size: 4em;

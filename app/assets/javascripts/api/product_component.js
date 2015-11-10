@@ -8,6 +8,9 @@ ProductComponent.prototype.template = function(product){
   if(product.published == false){
     productTemplate += "<div class ='soldout-banner'></div><p id='soldout'>Sold out</p>"
   }
+  if(product.published == true && product.discount != null){
+    productTemplate += "<div class ='sale-banner'><p id='sale'>Sale!</p></div>"
+  }
   productTemplate += "<div class='product-details-index'><p id='title-index'>" + product.title + "</p>" 
   if(product.discount == null){
     productTemplate += "<p id='price-index'>$" + parseInt(product.price) + "</p></div>" 

@@ -47,6 +47,11 @@ es:
   email_success: "Tu mensaje ha sido enviado exitosamente. Te estaremos contactando pronto."
   fill_fields: "Por favor, llena todos los espacios y asegúrate que tu email tenga el formato correcto."
   #PRODUCTS
+  two_pieces: "Dos piezas" 
+  trikinis: "Trikinis"
+  one_piece: "Enterizos"
+  accessories: "Accesorios"
+  clothing: "Ropa"
   search_query: "Busca por piezas, estilos, diseño, talla, material, etc."
   product_new_success: "Producto agregado exitosamente"
   product_new_fail: "Faltan campos para crear el producto"

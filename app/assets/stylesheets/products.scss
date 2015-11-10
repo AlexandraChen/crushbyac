@@ -3,8 +3,23 @@ $crush-gray: #696769;
 $light-gray: #F9F9F9;
 $silver: #DDDDDD;
 
+.navbar-collapse {
+  text-align:center;
+}
+.product-filter {
+  display:inline-block;
+  float:none;
+}
+.product-filter>li>a{
+  color: $crush-blue;
+  &:hover{
+    background: $light-gray;
+  }
+}
+
+
 .container.product-spacer{
-  padding-top: 7em;
+  padding-top: 0.2em;
 }
 
 .product-img{

@@ -28,6 +28,12 @@ $(document).ready(function () {
     search_query()
   })
 
+  $('#one-piece').click(function(event){
+    event.preventDefault()
+    $('#search').val("onesie")
+    search_query()
+  })
+
   $('#accessories').click(function(event){
     event.preventDefault()
     $('#search').val("accessories")

@@ -34,6 +34,12 @@ $(document).ready(function () {
     search_query()
   })
 
+  $('#cover-ups').click(function(event){
+    event.preventDefault()
+    $('#search').val("salida")
+    search_query()
+  })
+
   $('#accessories').click(function(event){
     event.preventDefault()
     $('#search').val("accessories")

@@ -21,4 +21,8 @@ Rails.application.routes.draw do
   get "/faq"                  => "sites#faq"
   get "/terms_and_conditions" => "sites#terms_and_conditions"
 
+  resources :clients, only: [:new, :create, :show]
+
+  get "/happy_customers"      => "clients#happy_customers"
+
 end

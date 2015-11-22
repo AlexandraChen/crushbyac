@@ -64,6 +64,10 @@ es:
   show_delivery: " *Agrega al carrito de compra los productos que te interesen probarte en nuestro showroom o si quieres que te lo enviemos a domicilio."
   email_order: " *¿Quieres saber más información, medirte la pieza o que te la enviemos a domicilio? Agrega los enlaces de los productos que te han gustado y déjanos un mensaje. "
   was_sale: "Antes"
+  #CLIENTS
+  client_new_success: "Foto de cliente agregada con éxito"
+  client_new_fail: "Oops! Parece que te faltó la foto o el nombre del cliente."
+  happy_customers: "Clientes felices"
   #FOOTER
   faq: "Preguntas frecuentes"
   terms: "Términos y condiciones"

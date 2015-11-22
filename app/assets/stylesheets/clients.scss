@@ -1,0 +1,32 @@
+$crush-blue: #73afe0;
+$crush-gray: #696769;
+$light-gray: #F9F9F9;
+$silver: #DDDDDD;
+
+.client-img{
+  max-width: 25em;
+  max-height: 25em;
+  padding: 1em;
+}
+
+#happy-customers{
+  padding-bottom: 5em;
+  >.container>.row>#panel-title{
+    color: $crush-blue;
+    font-size: 4em;
+    text-align: center;
+    padding-top: 2em;
+  }
+}
+
+#clients-gallery{
+  text-align: center;
+  padding-top: 2em;
+  >a{
+  color: $crush-blue;
+  }
+  >a:hover{
+    color: $crush-gray;
+    text-decoration: none;
+  }
+}

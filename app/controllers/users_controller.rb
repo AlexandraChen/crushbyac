@@ -5,6 +5,7 @@ class UsersController < ApplicationController
 		if current_user.admin?
 			@admin = current_user
       @products = @admin.products.order("updated_at DESC")
+      @clients = Client.all.order("updated_at DESC")
 		else
 			render root_path
 		end

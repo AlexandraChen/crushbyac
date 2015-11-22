@@ -2,10 +2,10 @@
   <div class="container">
     <div class="row">
     <p id="panel-title"> <%= t("happy_customers") %> </p>
-      <% if Client.all == nil %>
+      <% if @clients == nil %>
         <p> No clients pics </p>
       <% else %>
-        <% Client.all.each do |client| %>
+        <% @clients.each do |client| %>
           <div class="col-sm-4 product-wrapper">
             <%= image_tag client.img.url(:medium), class: "client-img"%>
           </div>

@@ -5,6 +5,7 @@ class SitesController < ApplicationController
     #Product.all.order("created_at ASC").limit(Product.count - 3).shuffle[0..Product.all.size]
     @products = Product.recent
     @contact_form = ContactForm.new
+    @clients = Client.all.limit(3).shuffle[0..Client.all.size]
 	end
 
   def contact_us

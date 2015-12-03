@@ -4,8 +4,12 @@ $light-gray: #F9F9F9;
 $silver: #DDDDDD;
 
 .client-img{
-  max-width: 25em;
-  max-height: 25em;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  display: block;
+  margin: auto;
   padding-bottom: 1em;
 }
 
@@ -29,4 +33,9 @@ $silver: #DDDDDD;
     color: $crush-gray;
     text-decoration: none;
   }
+}
+
+.client-wrapper{
+  max-height: 25em;
+  max-width:25em;
 }

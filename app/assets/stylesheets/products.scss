@@ -97,9 +97,10 @@ $silver: #DDDDDD;
 
 
 #soldout{
-  right: 0;
-  text-align: right;
-  margin-top: 1em;
+  top: 0.5em;
+  right: -0.6em;
+  text-align: center;
+  margin-top: 0.5em;
   -webkit-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
@@ -130,7 +131,7 @@ $silver: #DDDDDD;
 }
 
 #sale{
-  right: 22%;
+  right: 17%;
   margin-top: 1.4em;
 }
 

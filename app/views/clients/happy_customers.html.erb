@@ -6,10 +6,11 @@
         <p> No clients pics </p>
       <% else %>
         <% Client.all.each do |client| %>
-          <div class="col-sm-4 product-wrapper">
-            <%= image_tag client.img.url(:medium), class: "client-img"%>
-          </div>
+          <ul class="client-list">
+            <li><%= image_tag client.img.url(:medium), class: "client-img"%>
+            </li>%=  %>
         <% end %>
+        </ul>
       <% end %>
     </div>
     <% if current_page?("/") %>

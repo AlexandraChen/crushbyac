@@ -81,7 +81,7 @@ img[src="/assets/sites/logo-crush.jpg"]{
 }
 
 .main-panel{
-  height: 40em;
+  height: 35em;
   width: 100%;
   background: url("/assets/sites/sanblas.jpg") no-repeat;
   background-size: cover;
@@ -301,24 +301,6 @@ footer{
     font-weight: bold;
   }
 }
-
-@media (min-width: 768px) and (max-width: 991px) {
-    .navbar-collapse.collapse {
-        display: none !important;
-    }
-    .navbar-collapse.collapse.in {
-        display: block !important;
-    }
-    .navbar-header .collapse, .navbar-toggle {
-        display:block !important;
-    }
-    .navbar-header {
-        float:none;
-    }
-}
-
-
-
 
 
 

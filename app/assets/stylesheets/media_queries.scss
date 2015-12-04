@@ -8,6 +8,39 @@
   }
 }
 
+@media (max-width: 992px) {
+
+  .container.product-spacer{
+    margin-top: 2em;
+  }
+  div.site-product{
+    height: 100%;
+    width: 100%;
+    margin: auto;
+  };
+  .product-details-index {
+    margin-top: -0.6em;
+  }; 
+   #googleMap{
+    max-width: 100%;
+    margin: auto;
+  };
+  .address{
+    text-align: center;
+  }
+  div.product-details-index{
+    height: 23%;
+  }
+  p#price-index{
+    font-size: 80%;
+    margin-bottom: 0.3em;
+  }
+  p#title-index{
+    font-size: 80%;
+    margin-bottom: 0.3em;
+  }
+}
+
 @media (max-width: 767px) {
   .menu-links{
     text-align: right;
@@ -27,13 +60,10 @@
   #googleMap{
     max-width: 100%;
   };
-  div.site-product{
-    height: 100%;
-    width: 100%;
-    margin: auto;
-  };
   .col-sm-4.product-wrapper{
-    width:100%;
+    height: 75%;
+    width: 75%;
+    margin: auto;
   };
   .headlines p#panel-title{
     font-size: 2.5em;
@@ -53,28 +83,33 @@
   };
   img.product-img {
     margin-top: 2em;
-  }
+  };
   button.btn.btn-default.add-to-cart{
     margin-top: 2em;
     width: 100%;
+  };
+  #panel-title{
+    font-size:1em;
+  };
+  .container.product-spacer{
+    margin-top: 5em;
+  };
+  div.product-details-index{
+    margin-top: 4%;
   }
-}
-
-@media (max-width: 992px) {
-  div.site-product{
-    height: 100%;
-    width: 100%;
-    margin: auto;
-  };
-  .product-details-index {
-    margin-top: -0.6em;
-  }; 
-   #googleMap{
-    max-width: 100%;
-    margin: auto;
-  };
-  .address{
-    text-align: center;
+  div.product-details-index{
+    height: 13%;
+  }
+  p#price-index{
+    font-size: 90%;
+    margin-bottom: 1em;
+  }
+  p#title-index{
+    font-size: 90%;
+    margin-bottom: 1em;
+  }
+  .container>.row>#panel-title{
+    font-size:80%
   }
 }
 
@@ -91,7 +126,53 @@
   .navbar-header {
       float:none;
   }
+  input#search{
+    margin-top: 1em;
+  }
 }
 
+@media (max-width:500px){
+  .main-panel{
+    height: 25em;
+  }
+  .container.product-spacer{
+    margin-top: 8em;
+  }
+  .headlines{
+    >p#panel-title{
+    font-size: 1.5em;
+    }
+    >p#panel-slogan{
+      font-size: 0.8em;
+    }
+  }
+  p.value-proposition-title{
+    font-size: 1em;
+  }
+  input#search{
+    margin-top: -7em;
+  }
+  div.product-details-index{
+    margin-top: -1em;
+  }
+  div.product-details-index{
+    height: 23%;
+  }
+  p#price-index{
+    font-size: 70%;
+    margin-bottom: 0.5em;
+  }
+  p#title-index{
+    font-size: 70%;
+    margin-bottom: 0.5em;
+  }
+  .container>.row>#panel-title{
+    font-size: 70%
+  }
+  div.product-details-index{
+    height: 18%;
+    margin-top: 0.2em;
+  }
+}
 
 

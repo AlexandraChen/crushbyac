@@ -19,7 +19,7 @@
                 <p id="price-index">$<%= product.price.to_i %></p>
               <% else %>
                 <p class="discount" id="price-index"> <%= t("was_sale") %> $<%= product.price.to_i %></p>
-                <p id="price-index">$<%= product.discount.to_i %></p>
+                <p id="">$<%= product.discount.to_i %></p>
               <% end %>
             </div>
             <%= image_tag product.img.url, class: "product-img"%>
@@ -30,4 +30,7 @@
       <% end %>
     <% end %>
   </div>
+</div>
+<div class="text-center">
+   <%= will_paginate @products,:previous_label => 'Anterior', :next_label => 'Siguiente', renderer: BootstrapPagination::Rails %>
 </div>

@@ -6,7 +6,7 @@ ProductComponent.prototype.template = function(product){
   var products = "products/"
   var productTemplate = "<div class='col-sm-4 product-wrapper'><a href="+ products + product.id + "><div class='site-product'>"
   if(product.published == false){
-    productTemplate += "<div class ='soldout-banner'></div><p id='soldout'>Sold out</p>"
+    productTemplate += "<div class ='soldout-banner'></div><p id='soldout'>Vendido</p>"
   }
   if(product.published == true && product.discount != null){
     productTemplate += "<div class ='sale-banner'><p id='sale'>Sale!</p></div>"

@@ -5,7 +5,7 @@
         <% if @product.published == false %>
           <div class ="soldout-banner">
           </div> 
-          <p id="soldout">Sold out</p>
+          <p id="soldout"><%= t("sold_out") %></p>
         <% end %>
         <%= image_tag @product.img.url, class: "product-img"%>
       </div>

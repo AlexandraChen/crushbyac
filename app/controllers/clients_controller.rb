@@ -1,7 +1,8 @@
 class ClientsController < ApplicationController
 
   def happy_customers
-    
+    @clients = Client.all
+
   end
 
   def new

@@ -184,27 +184,34 @@ img[src="/assets/sites/logo-crush.jpg"]{
 }
 
 #location{
-  padding-top: 10em;
   #panel-title{
     color: $crush-blue;
     font-size: 4em;
     text-align: center;
+    margin: 2em 0 1em 0;
+  }
+}
+
+#happy-customers{
+  #panel-title{
+    margin: 0 0 1em 0;
   }
 }
 
 .address{
-  margin-top: 10em;
-  >p{
+  margin: 2em 0 5em 0;
+  p{
     color: $crush-gray;
     font-size: 1.22em;
   };
+  text-align: center;
 }
 
 #googleMap{
   height: 20em;
   width: 35em;
   margin-top: 2em;
-  margin-bottom: 6em;
+  margin:auto;
 }
 
 #contact-us{

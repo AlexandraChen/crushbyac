@@ -1,5 +1,7 @@
 $(document).ready(function () { 
-  $(".top-fill-field").keyup(function() {
+  // Top main color / pattern 
+  $(".top-fill-pattern").keyup(function() {
+    $(".top-fill-color").val("")
     if($(this).val()){
       $("#pattern image").attr("xlink:href", $(this).val() )
       $(".top-fill").attr("fill","url(#pattern)")
@@ -8,20 +10,126 @@ $(document).ready(function () {
       $(".top-fill").attr("fill","#fff")
     }
   })
-  $(".top-back-tie-field").keyup(function() {
-    $(".top-back-tie").css({"fill": $(this).val() })
+
+  $(".top-fill-color").keyup(function() {
+    $(".top-fill-pattern").val("")
+    if($(this).val()){
+      $(".top-fill").attr({"fill": $(this).val() })
+    }
+    else {
+       $(".top-fill").attr("fill","#fff")
+    }
   })
-  $(".top-neck-tie-field").keyup(function() {
-    $(".top-neck-tie").css({"fill": $(this).val() })
+
+// Top back tie color / pattern
+  $(".top-back-tie-pattern").keyup(function() {
+    $(".top-back-tie-color").val("")
+    if($(this).val()){
+      $("#pattern image").attr("xlink:href", $(this).val() )
+      $(".top-back-tie").attr("fill","url(#pattern)")
+    } 
+    else {  
+      $(".top-back-tie").attr("fill","#fff")
+    }
   })
-  $(".top-ruffles-field").keyup(function() {
-    $(".top-ruffles").css({"fill": $(this).val() })
+
+  $(".top-back-tie-color").keyup(function() {
+    $(".top-back-tie-pattern").val("")
+    if($(this).val()){
+      $(".top-back-tie").attr({"fill": $(this).val() })
+    }
+    else {
+       $(".top-back-tie").attr("fill","#fff")
+    }
   })
-  $(".bottom-fill-field").keyup(function() {
-    $(".bottom-fill").css({"fill": $(this).val() })
+
+// Top neck tie color/pattern
+
+  $(".top-neck-tie-pattern").keyup(function() {
+    $(".top-neck-tie-color").val("")
+    if($(this).val()){
+      $("#pattern image").attr("xlink:href", $(this).val() )
+      $(".top-neck-tie").attr("fill","url(#pattern)")
+    } 
+    else {  
+      $(".top-neck-tie").attr("fill","#fff")
+    }
   })
-  $(".bottom-lateral-field").keyup(function() {
-    $(".bottom-lateral").css({"fill": $(this).val() })
+
+  $(".top-neck-tie-color").keyup(function() {
+    $(".top-neck-tie-pattern").val("")
+    if($(this).val()){
+      $(".top-neck-tie").attr({"fill": $(this).val() })
+    }
+    else {
+       $(".top-neck-tie").attr("fill","#fff")
+    }
+  })
+
+// Top ruffles color/pattern
+  $(".top-ruffles-pattern").keyup(function() {
+    $(".top-ruffles-color").val("")
+    if($(this).val()){
+      $("#pattern image").attr("xlink:href", $(this).val() )
+      $(".top-ruffles").attr("fill","url(#pattern)")
+    } 
+    else {  
+      $(".top-ruffles").attr("fill","#fff")
+    }
+  })
+
+  $(".top-ruffles-color").keyup(function() {
+    $(".top-ruffles-pattern").val("")
+    if($(this).val()){
+      $(".top-ruffles").attr({"fill": $(this).val() })
+    }
+    else {
+       $(".top-ruffles").attr("fill","#fff")
+    }
+  })
+
+// Bottom main color/pattern
+  $(".bottom-fill-pattern").keyup(function() {
+    $(".bottom-fill-color").val("")
+    if($(this).val()){
+      $("#pattern image").attr("xlink:href", $(this).val() )
+      $(".bottom-fill").attr("fill","url(#pattern)")
+    } 
+    else {  
+      $(".bottom-fill").attr("fill","#fff")
+    }
+  })
+
+  $(".bottom-fill-color").keyup(function() {
+    $(".bottom-fill-pattern").val("")
+    if($(this).val()){
+      $(".bottom-fill").attr({"fill": $(this).val() })
+    }
+    else {
+       $(".bottom-fill").attr("fill","#fff")
+    }
+  })
+
+//Bottom laterals color/pattern
+  $(".bottom-lateral-pattern").keyup(function() {
+    $(".bottom-lateral-color").val("")
+    if($(this).val()){
+      $("#pattern image").attr("xlink:href", $(this).val() )
+      $(".bottom-lateral").attr("fill","url(#pattern)")
+    } 
+    else {  
+      $(".bottom-lateral").attr("fill","#fff")
+    }
+  })
+
+  $(".bottom-lateral-color").keyup(function() {
+    $(".bottom-lateral-pattern").val("")
+    if($(this).val()){
+      $(".bottom-lateral").attr({"fill": $(this).val() })
+    }
+    else {
+       $(".bottom-lateral").attr("fill","#fff")
+    }
   })
 })
 

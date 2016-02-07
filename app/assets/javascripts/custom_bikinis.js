@@ -3,8 +3,8 @@ $(document).ready(function () {
   $(".top-fill-pattern").keyup(function() {
     $(".top-fill-color").val("")
     if($(this).val()){
-      $("#pattern image").attr("xlink:href", $(this).val() )
-      $(".top-fill").attr("fill","url(#pattern)")
+      $("pattern#top-fill image").attr("xlink:href", $(this).val() )
+      $(".top-fill").attr("fill","url(#top-fill)")
     } 
     else {  
       $(".top-fill").attr("fill","#fff")
@@ -25,8 +25,8 @@ $(document).ready(function () {
   $(".top-back-tie-pattern").keyup(function() {
     $(".top-back-tie-color").val("")
     if($(this).val()){
-      $("#pattern image").attr("xlink:href", $(this).val() )
-      $(".top-back-tie").attr("fill","url(#pattern)")
+      $("pattern#top-back-tie image").attr("xlink:href", $(this).val() )
+      $(".top-back-tie").attr("fill","url(#top-back-tie)")
     } 
     else {  
       $(".top-back-tie").attr("fill","#fff")
@@ -48,8 +48,8 @@ $(document).ready(function () {
   $(".top-neck-tie-pattern").keyup(function() {
     $(".top-neck-tie-color").val("")
     if($(this).val()){
-      $("#pattern image").attr("xlink:href", $(this).val() )
-      $(".top-neck-tie").attr("fill","url(#pattern)")
+      $("pattern#top-neck-tie image").attr("xlink:href", $(this).val() )
+      $(".top-neck-tie").attr("fill","url(#top-neck-tie)")
     } 
     else {  
       $(".top-neck-tie").attr("fill","#fff")
@@ -70,8 +70,8 @@ $(document).ready(function () {
   $(".top-ruffles-pattern").keyup(function() {
     $(".top-ruffles-color").val("")
     if($(this).val()){
-      $("#pattern image").attr("xlink:href", $(this).val() )
-      $(".top-ruffles").attr("fill","url(#pattern)")
+      $("pattern#top-ruffles image").attr("xlink:href", $(this).val() )
+      $(".top-ruffles").attr("fill","url(#top-ruffles)")
     } 
     else {  
       $(".top-ruffles").attr("fill","#fff")
@@ -92,8 +92,8 @@ $(document).ready(function () {
   $(".bottom-fill-pattern").keyup(function() {
     $(".bottom-fill-color").val("")
     if($(this).val()){
-      $("#pattern image").attr("xlink:href", $(this).val() )
-      $(".bottom-fill").attr("fill","url(#pattern)")
+      $("pattern#bottom-fill image").attr("xlink:href", $(this).val() )
+      $(".bottom-fill").attr("fill","url(#bottom-fill)")
     } 
     else {  
       $(".bottom-fill").attr("fill","#fff")
@@ -114,8 +114,8 @@ $(document).ready(function () {
   $(".bottom-lateral-pattern").keyup(function() {
     $(".bottom-lateral-color").val("")
     if($(this).val()){
-      $("#pattern image").attr("xlink:href", $(this).val() )
-      $(".bottom-lateral").attr("fill","url(#pattern)")
+      $("pattern#bottom-lateral image").attr("xlink:href", $(this).val() )
+      $(".bottom-lateral").attr("fill","url(#bottom-lateral)")
     } 
     else {  
       $(".bottom-lateral").attr("fill","#fff")

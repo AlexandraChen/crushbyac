@@ -1,6 +1,12 @@
 $(document).ready(function () { 
   $(".top-fill-field").keyup(function() {
-    $(".top-fill").css({"fill": $(this).val() })
+    if($(this).val()){
+      $("#pattern image").attr("xlink:href", $(this).val() )
+      $(".top-fill").attr("fill","url(#pattern)")
+    } 
+    else {  
+      $(".top-fill").attr("fill","#fff")
+    }
   })
   $(".top-back-tie-field").keyup(function() {
     $(".top-back-tie").css({"fill": $(this).val() })

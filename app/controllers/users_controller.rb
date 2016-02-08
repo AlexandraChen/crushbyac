@@ -5,9 +5,10 @@ class UsersController < ApplicationController
 		if current_user.admin?
 			@admin = current_user
       @products = @admin.products.order("updated_at DESC")
-      @clients = Client.all.order("updated_at DESC")
+      @clients = @admin.clients.order("updated_at DESC")
+      @colors = @admin.colors.order("updated_at DESC")
 		else
-			render root_path
+			render root_path, notice: "You have to be an administrator"
 		end
 	end
 

@@ -1,0 +1,15 @@
+<div class="container spacer">
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+    <h2>Edit color</h2>
+      <%= form_for @color do |f| %>
+        <%= f.label "Color picture" %>
+        <%= f.file_field :img %>
+        <%= f.label "Color" %>
+        <%= f.text_field :name, class: "form-control", placeholder:"name" %>
+        <br>
+        <%= f.submit "Edit color", class: "btn btn-default col-sm-12"%>
+      <% end %>
+    </div>
+  </div>
+</div>

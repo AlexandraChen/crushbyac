@@ -19,9 +19,11 @@ Rails.application.routes.draw do
  
   resources :contact_forms, only: [:new, :create]
   resources :products, except: [:destroy]
+  resources :colors, except: [:destroy]
   resources :clients, only: [:new, :create, :show]
 
   get "/happy_customers"      => "clients#happy_customers"
   get "/custom"               => "products#custom_bikini" 
 
 end
+

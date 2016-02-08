@@ -22,6 +22,7 @@
 es:
   #ERRORS
   full_name_error: "Por favor, escribe tu nombre y apellido separado por un espacio"
+  you_have_to_be_admin: "Oops! Debes de ser un administrador para proseguir."
   #SITE
   why_crush: "¿Por qué Crush?"
   contact: "Contáctanos"
@@ -69,6 +70,10 @@ es:
   client_new_success: "Foto de cliente agregada con éxito"
   client_new_fail: "Oops! Parece que te faltó la foto o el nombre del cliente."
   happy_customers: "Clientes felices"
+  #COLORS
+  color_new_success: "Color agregado exitosamente"
+  color_new_fail: "Oops! Parece que falló la subida del color"
+  add_color: "Agregar color"
   #FOOTER
   faq: "Preguntas frecuentes"
   terms: "Términos y condiciones"

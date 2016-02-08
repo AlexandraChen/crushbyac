@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   has_many :products
   has_many :colors
   has_many :clients
+  has_many :patterns
   
   validates :email, presence: true, format: { with: /.+@.+\..+/i }
   validates :full_name, presence: true, format: { with: /\A[^0-9`!@#\$%\^&*+_=]+\z/ }

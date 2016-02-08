@@ -28,10 +28,10 @@ class ColorsController < ApplicationController
     @color.update_attributes(color_params)
     if @color.valid?
       @color.save
-      redirect_to admin_panel_path, notice: "Color agregado satisfactoriamente"
+      redirect_to admin_panel_path, notice: I18n.t(:color_edit_success)
       return
     end
-    flash[:notice] = "Edición de color falló!"
+    flash[:notice] = I18n.t(:color_edit_fail)
     render :edit
   end
 

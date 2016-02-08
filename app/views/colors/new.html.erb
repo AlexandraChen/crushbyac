@@ -1,14 +1,14 @@
 <div class="container spacer">
   <div class="row">
     <div class="col-sm-4 col-sm-offset-4">
-    <h2>Add color</h2>
+    <h2><%= t("add_color") %></h2>
       <%= form_for @color do |f| %>
-        <%= f.label "Color picture" %>
+        <%= f.label t("color_img") %>
         <%= f.file_field :img %>
-        <%= f.label "Color" %>
+        <%= f.label t("color_name") %>
         <%= f.text_field :name, class: "form-control", placeholder:"name" %>
         <br>
-        <%= f.submit "Add color", class: "btn btn-default col-sm-12"%>
+        <%= f.submit t("add_color"), class: "btn btn-default col-sm-12"%>
       <% end %>
     </div>
   </div>

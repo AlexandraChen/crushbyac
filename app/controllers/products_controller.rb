@@ -1,13 +1,18 @@
 class ProductsController < ApplicationController
 	#only admin users can create
-	# before_action :current_user.admin, only: [:new, :create, :update]
+	# before_action :current_user, only: [:new, :create, :update]
   def show
     @product = Product.find(params[:id])
     @contact_form = ContactForm.new
   end
 
   def new
-    @product = current_user.products.new
+    if current_user.admin?
+      @product = current_user.products.new
+    else
+      flash[:notice] = "You have to be an admin to add products"
+        redirect_to root_path
+    end 
   end
 
   def create
@@ -27,10 +32,12 @@ class ProductsController < ApplicationController
   def update
     @product = Product.find(params[:id])
     @product.update_attributes(product_params)
-    if @product.valid?
-      @product.save
-      redirect_to admin_panel_path, notice: I18n.t(:product_update_success)
-      return
+    if current_user.admin?
+      if @product.valid?
+        @product.save
+        redirect_to admin_panel_path, notice: I18n.t(:product_update_success)
+        return
+      end
     end
     flash[:notice] = I18n.t(:product_new_fail)
     render :edit

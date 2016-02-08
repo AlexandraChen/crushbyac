@@ -2,11 +2,15 @@ class ClientsController < ApplicationController
 
   def happy_customers
     @clients = Client.all
-
   end
 
   def new
-    @client = Client.new
+    if current_user.admin?
+      @client = Client.new
+    else
+      flash[:notice] = "You have to be an admin to add clients pictures"
+      redirect_to root_path
+    end
   end
 
   def create

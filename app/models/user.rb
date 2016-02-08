@@ -4,7 +4,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :products
-
+  has_many :colors
+  has_many :clients
+  
   validates :email, presence: true, format: { with: /.+@.+\..+/i }
   validates :full_name, presence: true, format: { with: /\A[^0-9`!@#\$%\^&*+_=]+\z/ }
  	validate :full_name_length

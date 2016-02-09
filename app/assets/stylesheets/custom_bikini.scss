@@ -3,3 +3,20 @@
   stroke-miterlimit:10;
 }
 
+
+.pallette-color{
+  height: 25px; 
+  width: 25px;
+  border: 0.5px solid #EEE;
+}
+
+.main-pallette-item{
+  height: 100%;
+  width: 100%;
+  border: 0.5px solid #EEE;
+}
+
+.main-pallette-description{
+  font-size: 8px;
+  text-align: center;
+}

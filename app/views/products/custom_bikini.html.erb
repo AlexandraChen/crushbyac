@@ -1,5 +1,22 @@
 <div class="section">
   <div class="container spacer">
+  <div class="row">
+    <h3>Colores y estampados disponibles</h3>
+    <% Color.all.each do |color| %>
+      <div class="col-md-1">
+        <%= image_tag color.img(:thumb), class: "main-pallette-item" %><br>
+        <p class="main-pallette-description"><%= color.name %></p>
+      </div>
+     <% end %>
+    </div>
+    <div class="row">
+      <% Pattern.all.each do |pattern| %>
+      <div class="col-md-1">
+        <%= image_tag pattern.img(:thumb), class: "main-pallette-item" %><br>
+        <p class="main-pallette-description"><%= pattern.name %></p>
+      </div>
+     <% end %>
+    </div>
     <div class="row">
       <div class="col-md-6">
       <svg id="Traje_6" data-name="Traje 6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496.07 395.59">
@@ -18,25 +35,78 @@
         </svg>
       </div>
     <div class="col-md-6">
-      Top Design: <input type="text" class= "top-design-pattern"><br>
-      Bottom Design: <input type="text" class= "bottom-design-pattern"><br>
+    <br>
+<!--       Top Design: <input type="text" class= "top-design-pattern"><br>
+      Bottom Design: <input type="text" class= "bottom-design-pattern"><br> -->
       <br>
-      COLORS<br>
-      Top neck ties: <input type="text" class= "top-neck-tie-color"><br>
-      Top fill: <input type="text" class="top-fill-color"><br>
-      Top ruffles: <input type="text" class="" ="top-ruffles-color"><br>
-      Top back ties: <input type="text" class="top-back-tie-color"><br>
-      Bottom fill: <input type="text" class="bottom-fill-color"><br>
-      Bottom lateral: <input type="text" class="bottom-lateral-color"><br>
+      <h4>Colors & Patterns</h4>
+      <p>Top neck ties:</p> 
+      <% Color.all.each do |color| %>
+        <%= radio_button_tag(:top_neck_tie, color.img.url, false, class: "top-neck-tie-pattern") %>
+        <%= image_tag color.img(:thumb), class: "pallette-color" %>
+      <% end %><br>
+      <% Pattern.all.each do |pattern| %>
+        <%= radio_button_tag(:top_neck_tie, pattern.img.url, false, class: "top-neck-tie-pattern") %>
+        <%= image_tag pattern.img(:thumb), class: "pallette-color" %>
+      <% end %>
       <br>
-      PATTERNS<br>
-      Top neck ties: <input type="text" class= "top-neck-tie-pattern"><br>
-      Top fill: <input type="text" class="top-fill-pattern"><br>
-      Top ruffles: <input type="text" class="" ="top-ruffles-pattern"><br>
-      Top back ties: <input type="text" class="top-back-tie-pattern"><br>
-      Bottom fill: <input type="text" class="bottom-fill-pattern"><br>
-      Bottom lateral: <input type="text" class="bottom-lateral-pattern"><br>
+      <br>
+      <p>Top fill:</p> 
+      <% Color.all.each do |color| %>
+        <%= radio_button_tag(:top_fill, color.img.url, false, class: "top-fill-pattern") %>
+        <%= image_tag color.img(:thumb), class: "pallette-color" %>
+      <% end %><br>
+      <% Pattern.all.each do |pattern| %>
+        <%= radio_button_tag(:top_fill, pattern.img.url, false, class: "top-fill-pattern") %>
+        <%= image_tag pattern.img(:thumb), class: "pallette-color" %>
+      <% end %>
+      <br>
+      <br>
+      <p>Top back ties:</p>
+      <% Color.all.each do |color| %>
+        <%= radio_button_tag(:top_back_tie, color.img.url, false, class: "top-back-tie-pattern") %>
+        <%= image_tag color.img(:thumb), class: "pallette-color" %>
+      <% end %><br>
+      <% Pattern.all.each do |pattern| %>
+        <%= radio_button_tag(:top_back_tie, pattern.img.url, false, class: "top-back-tie-pattern") %>
+        <%= image_tag pattern.img(:thumb), class: "pallette-color" %>
+      <% end %>
+      <br>
+      <br>
+      <p>Top ruffles:</p>
+      <% Color.all.each do |color| %>
+        <%= radio_button_tag(:top_ruffles, color.img.url, false, class: "top-ruffles-pattern") %>
+        <%= image_tag color.img(:thumb), class: "pallette-color" %>
+      <% end %><br>
+      <% Pattern.all.each do |pattern| %>
+        <%= radio_button_tag(:top_ruffles, pattern.img.url, false, class: "top-ruffles-pattern") %>
+        <%= image_tag pattern.img(:thumb), class: "pallette-color" %>
+      <% end %>
+      <br>
+      <br> 
+      <p>Bottom fill:</p>
+      <% Color.all.each do |color| %>
+        <%= radio_button_tag(:bottom_fill, color.img.url, false, class: "bottom-fill-pattern") %>
+        <%= image_tag color.img(:thumb), class: "pallette-color" %>
+      <% end %><br>
+      <% Pattern.all.each do |pattern| %>
+        <%= radio_button_tag(:bottom_fill, pattern.img.url, false, class: "bottom-fill-pattern") %>
+        <%= image_tag pattern.img(:thumb), class: "pallette-color" %>
+      <% end %>
+      <br>
+      <br>
+      <p>Bottom lateral:</p>
+      <% Color.all.each do |color| %>
+        <%= radio_button_tag(:bottom_lateral, color.img.url, false, class: "bottom-lateral-pattern") %>
+        <%= image_tag color.img(:thumb), class: "pallette-color" %>
+      <% end %><br>
+      <% Pattern.all.each do |pattern| %>
+        <%= radio_button_tag(:bottom_lateral, pattern.img.url, false, class: "bottom-lateral-pattern") %>
+        <%= image_tag pattern.img(:thumb), class: "pallette-color" %>
+      <% end %>
+      <br>
+      <br>
+      </div>
     </div>
-       </div>
   </div>
 </div>

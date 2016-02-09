@@ -46,7 +46,7 @@
           <% @colors.each do |color| %>
             <li><%= image_tag color.img.url(:thumb)%><br>
               ID <%= color.id %> | <%= link_to color.name, color_path(color.id) %> | <%= link_to t("edit_color"), edit_color_path(color.id) %>
-            </li> 
+            </li> <br>
           <% end %>
         </div>
       </div>
@@ -62,7 +62,7 @@
           <% @patterns.each do |pattern| %>
             <li><%= image_tag pattern.img.url(:thumb)%><br>
               ID <%= pattern.id %> | <%= link_to pattern.name, pattern_path(pattern.id) %> | <%= link_to t("edit_pattern"), edit_pattern_path(pattern.id) %>
-            </li> 
+            </li> <br>
           <% end %>
         </div>
       </div>

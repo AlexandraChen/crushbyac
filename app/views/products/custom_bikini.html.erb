@@ -1,22 +1,5 @@
 <div class="section">
   <div class="container spacer">
-  <div class="row">
-    <h3>Colores y estampados disponibles</h3>
-    <% Color.all.each do |color| %>
-      <div class="col-md-1">
-        <%= image_tag color.img(:thumb), class: "main-pallette-item" %><br>
-        <p class="main-pallette-description"><%= color.name %></p>
-      </div>
-     <% end %>
-    </div>
-    <div class="row">
-      <% Pattern.all.each do |pattern| %>
-      <div class="col-md-1">
-        <%= image_tag pattern.img(:thumb), class: "main-pallette-item" %><br>
-        <p class="main-pallette-description"><%= pattern.name %></p>
-      </div>
-     <% end %>
-    </div>
     <div class="row">
       <div class="col-md-6 custom-bikini">
         <svg id="Traje_6" data-name="Traje 6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496.07 395.59">
@@ -108,6 +91,25 @@
               <% end %>
             </div>
           </div>
+        </div>
+      </div>
+        <h3>Colores y estampados disponibles</h3>
+        <div class="row">
+          <% Color.all.each do |color| %>
+            <div class="col-md-1">
+              <%= image_tag color.img(:thumb), class: "main-pallette-item" %><br>
+              <p class="main-pallette-description"><%= color.name %></p>
+            </div>
+           <% end %>
+          </div>
+        </div>
+        <div class="row">
+          <% Pattern.all.each do |pattern| %>
+          <div class="col-md-1">
+            <%= image_tag pattern.img(:thumb), class: "main-pallette-item" %><br>
+            <p class="main-pallette-description"><%= pattern.name %></p>
+          </div>
+         <% end %>
         </div>
       </div>
     </div>

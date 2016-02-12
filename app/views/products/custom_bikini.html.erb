@@ -97,7 +97,7 @@
         <div class="row">
           <% Color.all.each do |color| %>
             <div class="col-md-1">
-              <%= image_tag color.img(:thumb), class: "main-pallette-item" %><br>
+              <%= image_tag color.img(:medium), class: "main-pallette-item" %><br>
               <p class="main-pallette-description"><%= color.name %></p>
             </div>
            <% end %>
@@ -106,7 +106,7 @@
         <div class="row">
           <% Pattern.all.each do |pattern| %>
           <div class="col-md-1">
-            <%= image_tag pattern.img(:thumb), class: "main-pallette-item" %><br>
+            <%= image_tag pattern.img(:medium), class: "main-pallette-item" %><br>
             <p class="main-pallette-description"><%= pattern.name %></p>
           </div>
          <% end %>

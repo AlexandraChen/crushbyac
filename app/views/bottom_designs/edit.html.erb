@@ -1,0 +1,15 @@
+<div class="container spacer">
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+    <h2><%= t("edit_bottom_design") %></h2>
+      <%= form_for @bottom_design do |f| %>
+        <%= f.label t("bottom_design_img") %>
+        <%= f.file_field :img %>
+        <%= f.label t("bottom_design_name") %>
+        <%= f.text_field :name, class: "form-control", placeholder:"name" %>
+        <br>
+        <%= f.submit t("edit_bottom_design"), class: "btn btn-default col-sm-12"%>
+      <% end %>
+    </div>
+  </div>
+</div>

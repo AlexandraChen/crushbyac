@@ -11,10 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160208153544) do
+ActiveRecord::Schema.define(version: 20160213160833) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bottom_designs", force: :cascade do |t|
+    t.string   "name"
+    t.string   "img_file_name"
+    t.string   "img_content_type"
+    t.integer  "img_file_size"
+    t.datetime "img_updated_at"
+    t.boolean  "published",        default: true
+    t.integer  "user_id"
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+  end
 
   create_table "clients", force: :cascade do |t|
     t.string   "name"
@@ -40,6 +52,13 @@ ActiveRecord::Schema.define(version: 20160208153544) do
   end
 
   create_table "contact_forms", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "custom_bikinis", force: :cascade do |t|
+    t.integer  "top_id"
+    t.integer  "bottom_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -72,6 +91,18 @@ ActiveRecord::Schema.define(version: 20160208153544) do
     t.string   "categories"
     t.string   "tags"
     t.boolean  "published",                                default: true
+  end
+
+  create_table "top_designs", force: :cascade do |t|
+    t.string   "name"
+    t.string   "img_file_name"
+    t.string   "img_content_type"
+    t.integer  "img_file_size"
+    t.datetime "img_updated_at"
+    t.boolean  "published",        default: true
+    t.integer  "user_id"
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
   end
 
   create_table "users", force: :cascade do |t|

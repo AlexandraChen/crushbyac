@@ -1,0 +1,2 @@
+class CustomBikinisController < ApplicationController
+end

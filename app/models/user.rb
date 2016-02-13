@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
   has_many :colors
   has_many :clients
   has_many :patterns
+  has_many :top_designs
+  has_many :bottom_designs
   
   validates :email, presence: true, format: { with: /.+@.+\..+/i }
   validates :full_name, presence: true, format: { with: /\A[^0-9`!@#\$%\^&*+_=]+\z/ }

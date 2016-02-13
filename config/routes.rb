@@ -27,7 +27,7 @@ Rails.application.routes.draw do
   resources :clients, only: [:new, :create, :show]
 
   get "/happy_customers"      => "clients#happy_customers"
-  get "/custom"               => "products#custom_bikini" 
+  get "/custom"               => "custom_bikinis#index" 
 
 end
 

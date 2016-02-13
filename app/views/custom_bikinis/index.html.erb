@@ -4,7 +4,7 @@
       <div class="col-md-6 custom-bikini">
         <svg id="Traje_6" data-name="Traje 6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496.07 395.59">
           <title>Halter Oppened - Regular Bottom</title>
-          <%= render partial: 'products/custom_bikini_patterns' %>
+          <%= render partial: 'custom_bikinis/custom_bikini_patterns' %>
           
           <g id="T6-2" data-name="T6">
             <path class="swimwear top-neck-tie" d="M327,59.8a5.94,5.94,0,1,0-11.13,2.9l-36.26,59,5.16,3.17,36.34-59.15A5.94,5.94,0,0,0,327,59.8Z" transform="translate(-2.43 -53.36)" fill= "#fff"/>
@@ -29,37 +29,37 @@
         <div class="panel-body">
           <div class="col-md-6">
             <p>Neck ties:</p> 
-            <% Color.all.each do |color| %>
+            <% @colors.each do |color| %>
               <%= image_submit_tag(color.img(:thumb), type: :image, value: color.img.url, class: "top-neck-tie-pattern pallette-color", name: :top_neck_tie) %>
             <% end %><br>
-            <% Pattern.all.each do |pattern| %>
+            <% @patterns.each do |pattern| %>
               <%= image_submit_tag(pattern.img(:thumb), type: :image, value: pattern.img.url, class: "top-neck-tie-pattern pallette-color", name: :top_neck_tie) %>
             <% end %>
           </div>
           <div class="col-md-6">
             <p>Main section:</p> 
-            <% Color.all.each do |color| %>
+            <% @colors.each do |color| %>
               <%= image_submit_tag(color.img(:thumb), type: :image, value: color.img.url, class: "top-fill-pattern pallette-color", name: :top_fill) %>
             <% end %><br>
-            <% Pattern.all.each do |pattern| %>
+            <% @patterns.each do |pattern| %>
               <%= image_submit_tag(pattern.img(:thumb), type: :image, value: pattern.img.url, class: "top-fill-pattern pallette-color", name: :top_fill) %>
             <% end %>
           </div>
           <div class="col-md-6">
             <p>Back ties:</p>
-            <% Color.all.each do |color| %>
+            <% @colors.each do |color| %>
               <%= image_submit_tag(color.img(:thumb), type: :image, value: color.img.url, class: "top-back-tie-pattern pallette-color", name: :top_back_tie) %>
             <% end %><br>
-            <% Pattern.all.each do |pattern| %>
+            <% @patterns.each do |pattern| %>
               <%= image_submit_tag(pattern.img(:thumb), type: :image, value: pattern.img.url, class: "top-back-tie-pattern pallette-color", name: :top_back_tie) %>
             <% end %>
            </div>
           <div class="col-md-6">
             <p>Ruffles:</p>
-            <% Color.all.each do |color| %>
+            <% @colors.each do |color| %>
               <%= image_submit_tag(color.img(:thumb), type: :image, value: color.img.url, class: "top-ruffles-pattern pallette-color", name: :top_ruffles) %>
             <% end %><br>
-            <% Pattern.all.each do |pattern| %>
+            <% @patterns.each do |pattern| %>
               <%= image_submit_tag(pattern.img(:thumb), type: :image, value: pattern.img.url, class: "top-ruffles-pattern pallette-color", name: :top_ruffles) %>
             <% end %>
             </div>
@@ -74,19 +74,19 @@
           <div class="panel-body">
             <div class="col-md-6">
               <p>Main section:</p>
-              <% Color.all.each do |color| %>
+              <% @colors.each do |color| %>
                 <%= image_submit_tag(color.img(:thumb), type: :image, value: color.img.url, class: "bottom-fill-pattern pallette-color", name: :bottom_fill) %>
               <% end %><br>
-              <% Pattern.all.each do |pattern| %>
+              <% @patterns.each do |pattern| %>
                 <%= image_submit_tag(pattern.img(:thumb), type: :image, value: pattern.img.url, class: "bottom-fill-pattern pallette-color", name: :bottom_fill) %>
               <% end %>
             </div>    
             <div col="col-md-6">
               <p>Laterals:</p>
-              <% Color.all.each do |color| %>
+              <% @colors.each do |color| %>
                 <%= image_submit_tag(color.img(:thumb), type: :image, value: color.img.url, class: "bottom-lateral-pattern pallette-color", name: :bottom_lateral) %>
               <% end %><br>
-              <% Pattern.all.each do |pattern| %>
+              <% @patterns.each do |pattern| %>
                 <%= image_submit_tag(pattern.img(:thumb), type: :image, value: pattern.img.url, class: "bottom-lateral-pattern pallette-color", name: :bottom_lateral) %>
               <% end %>
             </div>
@@ -95,7 +95,7 @@
       </div>
         <h3>Colores y estampados disponibles</h3>
         <div class="row">
-          <% Color.all.each do |color| %>
+          <% @colors.each do |color| %>
             <div class="col-md-1">
               <%= image_tag color.img(:medium), class: "main-pallette-item" %><br>
               <p class="main-pallette-description"><%= color.name %></p>
@@ -104,7 +104,7 @@
           </div>
         </div>
         <div class="row">
-          <% Pattern.all.each do |pattern| %>
+          <% @patterns.each do |pattern| %>
           <div class="col-md-1">
             <%= image_tag pattern.img(:medium), class: "main-pallette-item" %><br>
             <p class="main-pallette-description"><%= pattern.name %></p>

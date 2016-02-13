@@ -40,7 +40,7 @@
       <div class="panel panel-default">
         <div class="panel-heading">
           <h3 class="panel-title">Fills</h3>
-          <p><%= link_to t("add_color"), new_fill_path %></p>
+          <p><%= link_to t("add_fill"), new_fill_path %></p>
         </div>
         <div class="panel-body admin-listing">
           <% @colors.each do |color| %>
@@ -56,12 +56,12 @@
       <div class="panel panel-default">
         <div class="panel-heading">
           <h3 class="panel-title"> Patterns </h3>
-          <p><%= link_to t("add_pattern"), new_fill_path %></p>
+          <p><%= link_to t("add_fill"), new_fill_path %></p>
         </div>
         <div class="panel-body admin-listing">
           <% @patterns.each do |pattern| %>
             <li><%= image_tag pattern.img.url(:thumb)%><br>
-              ID <%= pattern.id %> | <%= link_to pattern.name, fill_path(pattern.id) %> | <%= link_to t("edit_pattern"), edit_fill_path(pattern.id) %>
+              ID <%= pattern.id %> | <%= link_to pattern.name, fill_path(pattern.id) %> | <%= link_to t("edit_fill"), edit_fill_path(pattern.id) %>
             </li> <br>
           <% end %>
         </div>

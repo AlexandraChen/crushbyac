@@ -4,8 +4,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :products
-  has_many :colors
   has_many :clients
+  has_many :fills
   has_many :patterns
   has_many :top_designs
   has_many :bottom_designs

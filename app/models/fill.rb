@@ -1,4 +1,4 @@
-class Pattern < ActiveRecord::Base
+class Fill < ActiveRecord::Base
   belongs_to :user
   has_attached_file :img,
       :styles => { 
@@ -8,4 +8,6 @@ class Pattern < ActiveRecord::Base
        :default_url => "no_pic.png"
   validates_attachment_content_type :img, :content_type => /\Aimage\/.*\Z/
   validates_attachment_presence :img
+  validates :name, presence: true
+  validates_inclusion_of :fill_type, in: Choices['fill']
 end

@@ -2,11 +2,12 @@
   <div class="row">
     <div class="col-sm-4 col-sm-offset-4">
     <h2><%= t("add_color") %></h2>
-      <%= form_for @color do |f| %>
+      <%= form_for @fill do |f| %>
         <%= f.label t("color_img") %>
         <%= f.file_field :img %>
         <%= f.label t("color_name") %>
         <%= f.text_field :name, class: "form-control", placeholder:"name" %>
+        <%= f.select :fill_type, Choices['fill'],  class: "form-control" %>
         <br>
         <%= f.submit t("add_color"), class: "btn btn-default col-sm-12"%>
       <% end %>

@@ -1,9 +1,15 @@
 $(document).ready(function () { 
+  //Top design
+  $(".top-design").click(function() {
+    $("#top_design_picked").html( $(this).val() )
+  })
+
   // Top neck tie color/pattern
   $(".top-neck-tie-pattern").click(function() {
     if($(this).val()){
       $("pattern#top-neck-tie image").attr("xlink:href", $(this).val() )
       $(".top-neck-tie").attr("fill","url(#top-neck-tie)")
+      $("#top_neck_tie_fill_picked").attr("value", $(this).val() )
     } 
     else {  
       $(".top-neck-tie").attr("fill","#fff")
@@ -29,7 +35,6 @@ $(document).ready(function () {
       $(".top-back-tie").attr("fill","#fff")
     }
   })
-
 // Top ruffles color/pattern
   $(".top-ruffles-pattern").click(function() {
     if($(this).val()){
@@ -40,7 +45,6 @@ $(document).ready(function () {
       $(".top-ruffles").attr("fill","#fff")
     }
   })
-
 // Bottom main color/pattern
   $(".bottom-fill-pattern").click(function() {
     if($(this).val()){
@@ -51,7 +55,6 @@ $(document).ready(function () {
       $(".bottom-fill").attr("fill","#fff")
     }
   })
-
 //Bottom laterals color/pattern
   $(".bottom-lateral-pattern").click(function() {
     if($(this).val()){

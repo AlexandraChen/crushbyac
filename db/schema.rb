@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160213223836) do
+ActiveRecord::Schema.define(version: 20160216011613) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,10 +45,16 @@ ActiveRecord::Schema.define(version: 20160213223836) do
   end
 
   create_table "custom_bikinis", force: :cascade do |t|
-    t.integer  "top_id"
-    t.integer  "bottom_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "top_design"
+    t.string   "bottom_design"
+    t.string   "top_neck_tie_fill"
+    t.string   "top_main_fill"
+    t.string   "top_back_tie_fill"
+    t.string   "top_ruffles_fill"
+    t.string   "bottom_main_fill"
+    t.string   "bottom_lateral_fill"
   end
 
   create_table "fills", force: :cascade do |t|

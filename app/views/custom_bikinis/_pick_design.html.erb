@@ -1,0 +1,15 @@
+<h3> Escoge tu bikini </h3>
+<div class="row">
+  <% @top_designs.each do |top_design| %>
+    <div class="col-md-2">
+      <%= image_submit_tag(top_design.img(:medium), type: :image, value: top_design.name, class: "main-pallette-item top_design", name: :top_design) %><br>
+      <p class="main-pallette-description"><%= top_design.name %></p>
+    </div>
+   <% end %>
+   <% @bottom_designs.each do |bottom_design| %>
+    <div class="col-md-2">
+      <%= image_submit_tag(bottom_design.img(:medium), type: :image, value: bottom_design.name, class: "main-pallette-item bottom_design") %><br>
+      <p class="main-pallette-description"><%= bottom_design.name %></p>
+    </div>
+   <% end %>
+</div>

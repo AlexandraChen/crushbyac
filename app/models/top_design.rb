@@ -1,6 +1,4 @@
 class TopDesign < ActiveRecord::Base
-  belongs_to :custom_bikini
-
   has_attached_file :img,
       :styles => { 
         :medium => "450x450>",

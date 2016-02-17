@@ -20,38 +20,41 @@
           <div class="panel-body">
             <div class="col-md-6">
               <p>Neck ties:</p> 
-              <% @colors.each do |color| %>
-                <%= image_submit_tag(color.img(:thumb), type: :image, value: color.img.url, class: "top-neck-tie-pattern pallette-color", name: :top_neck_tie) %>
+              <% @colors.each do |fill| %>
+                <%= image_submit_tag(fill.img(:thumb), type: :image, value: fill.img.url, :data => { :fill_name => fill.name }, class: "top-neck-tie-fill pallette-color", name: :top_neck_tie) %>
               <% end %><br>
-              <% @patterns.each do |pattern| %>
-                <%= image_submit_tag(pattern.img(:thumb), type: :image, value: pattern.img.url, class: "top-neck-tie-pattern pallette-color", name: :top_neck_tie) %>
+              <% @patterns.each do |fill| %>
+              
+                <%= image_submit_tag(fill.img(:thumb), type: :image, value: fill.img.url, :data => { :fill_name => fill.name }, class: "top-neck-tie-fill pallette-color", name: :top_neck_tie) %>
+            
               <% end %>
+
             </div>
             <div class="col-md-6">
               <p>Main section:</p> 
               <% @colors.each do |color| %>
-                <%= image_submit_tag(color.img(:thumb), type: :image, value: color.img.url, class: "top-fill-pattern pallette-color", name: :top_fill) %>
+                <%= image_submit_tag(color.img(:thumb), type: :image, value: color.img.url, class: "top-main-fill pallette-color", name: :top_fill) %>
               <% end %><br>
-              <% @patterns.each do |pattern| %>
-                <%= image_submit_tag(pattern.img(:thumb), type: :image, value: pattern.img.url, class: "top-fill-pattern pallette-color", name: :top_fill) %>
+              <% @patterns.each do |fill| %>
+                <%= image_submit_tag(fill.img(:thumb), type: :image, value: fill.img.url, :data => { :fill_name => fill.name }, class: "top-main-fill pallette-color", name: :top_fill) %>
               <% end %>
             </div>
             <div class="col-md-6">
               <p>Back ties:</p>
               <% @colors.each do |color| %>
-                <%= image_submit_tag(color.img(:thumb), type: :image, value: color.img.url, class: "top-back-tie-pattern pallette-color", name: :top_back_tie) %>
+                <%= image_submit_tag(color.img(:thumb), type: :image, value: color.img.url, :data => { :color_id => color.name }, class: "top-back-tie-fill pallette-color", name: :top_back_tie) %>
               <% end %><br>
-              <% @patterns.each do |pattern| %>
-                <%= image_submit_tag(pattern.img(:thumb), type: :image, value: pattern.img.url, class: "top-back-tie-pattern pallette-color", name: :top_back_tie) %>
+              <% @patterns.each do |fill| %>
+                <%= image_submit_tag(fill.img(:thumb), type: :image, value: fill.img.url, :data => { :fill_name => fill.name }, class: "top-back-tie-fill pallette-color", name: :top_back_tie) %>
               <% end %>
              </div>
             <div class="col-md-6">
               <p>Ruffles:</p>
               <% @colors.each do |color| %>
-                <%= image_submit_tag(color.img(:thumb), type: :image, value: color.img.url, class: "top-ruffles-pattern pallette-color", name: :top_ruffles) %>
+                <%= image_submit_tag(color.img(:thumb), type: :image, value: color.img.url, :data => { :color_id => color.name }, class: "top-ruffles-fill pallette-color", name: :top_ruffles) %>
               <% end %><br>
-              <% @patterns.each do |pattern| %>
-                <%= image_submit_tag(pattern.img(:thumb), type: :image, value: pattern.img.url, class: "top-ruffles-pattern pallette-color", name: :top_ruffles) %>
+              <% @patterns.each do |fill| %>
+                <%= image_submit_tag(fill.img(:thumb), type: :image, value: fill.img.url, :data => { :fill_name => fill.name }, class: "top-ruffles-fill pallette-color", name: :top_ruffles) %>
               <% end %>
               </div>
             </div>
@@ -66,20 +69,20 @@
             <div class="panel-body">
               <div class="col-md-6">
                 <p>Main section:</p>
-                <% @colors.each do |color| %>
-                  <%= image_submit_tag(color.img(:thumb), type: :image, value: color.img.url, class: "bottom-fill-pattern pallette-color", name: :bottom_fill) %>
+                <% @colors.each do |fill| %>
+                  <%= image_submit_tag(fill.img(:thumb), type: :image, value: fill.img.url, :data => { :fill_name => fill.name }, class: "bottom-main-fill pallette-color", name: :bottom_fill) %>
                 <% end %><br>
-                <% @patterns.each do |pattern| %>
-                  <%= image_submit_tag(pattern.img(:thumb), type: :image, value: pattern.img.url, class: "bottom-fill-pattern pallette-color", name: :bottom_fill) %>
+                <% @patterns.each do |fill| %>
+                  <%= image_submit_tag(fill.img(:thumb), type: :image, value: fill.img.url, :data => { :fill_name => fill.name }, class: "bottom-main-fill pallette-color", name: :bottom_fill) %>
                 <% end %>
               </div>    
               <div col="col-md-6">
                 <p>Laterals:</p>
-                <% @colors.each do |color| %>
-                  <%= image_submit_tag(color.img(:thumb), type: :image, value: color.img.url, class: "bottom-lateral-pattern pallette-color", name: :bottom_lateral) %>
+                <% @colors.each do |fill| %>
+                  <%= image_submit_tag(fill.img(:thumb), type: :image, value: fill.img.url, :data => { :fill_name => fill.name }, class: "bottom-lateral-fill pallette-color", name: :bottom_lateral) %>
                 <% end %><br>
-                <% @patterns.each do |pattern| %>
-                  <%= image_submit_tag(pattern.img(:thumb), type: :image, value: pattern.img.url, class: "bottom-lateral-pattern pallette-color", name: :bottom_lateral) %>
+                <% @patterns.each do |fill| %>
+                  <%= image_submit_tag(fill.img(:thumb), type: :image, value: fill.img.url, :data => { :fill_name => fill.name }, class: "bottom-lateral-fill pallette-color", name: :bottom_lateral) %>
                 <% end %>
               </div>
             </div>

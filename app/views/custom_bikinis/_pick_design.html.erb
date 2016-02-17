@@ -2,7 +2,7 @@
 <div class="row">
   <% @top_designs.each do |top_design| %>
     <div class="col-md-2">
-      <%= image_submit_tag(top_design.img(:medium), type: :image, value: top_design.name, class: "main-pallette-item top_design", name: :top_design) %><br>
+      <%= image_submit_tag(top_design.img(:medium), type: :image, value: top_design.name, class: "top_design main-pallette-item ", name: :top_design) %><br>
       <p class="main-pallette-description"><%= top_design.name %></p>
     </div>
    <% end %>

@@ -1,7 +1,7 @@
 class Product < ActiveRecord::Base
 	belongs_to :user
   validates :title, presence: true, length: {maximum: 40}
-  validates :description, presence: true
+  # validates :description, presence: true
   validates :user, presence: true
   validates :price, presence: true
   validates :size, presence: true
@@ -13,6 +13,6 @@ class Product < ActiveRecord::Base
       "%#{query}%".downcase, "%#{query}%".downcase, "%#{query}%".downcase, "%#{query}%".downcase, "%#{query}%".downcase) }
 
   def self.recent
-    all.order("created_at DESC")
+    all.order("id DESC")
   end
 end

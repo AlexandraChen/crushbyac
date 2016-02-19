@@ -7,6 +7,9 @@
         <%= f.file_field :img %>
         <%= f.label "Title" %>
         <%= f.text_field :title, class: "form-control", placeholder:"title" %>
+        <%= f.label "Published" %>
+        <%= f.check_box :published, {}, "true", "false"%>
+        <br>
         <%= f.label :description %>
         <%= f.text_area :description, class: "form-control", placeholder: "Description"%>
         <%= f.label "Price" %>

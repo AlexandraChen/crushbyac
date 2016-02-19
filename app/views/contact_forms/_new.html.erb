@@ -1,8 +1,8 @@
 <div id ="contact-form">
   <%= form_for @contact_form do |f|  %> 
-    <%= f.text_field  :name, :required => false, class: "form-control col-sm-10 contact-form-field contact-name", placeholder: "Nombre"  %> 
-    <%= f.text_field  :email, :required => false, class: "form-control col-sm-10 contact-form-field contact-email", placeholder: "Email"  %> 
-    <%= f.text_area  :message, :as => :text, :required => false, class: "form-control col-sm-10 contact-form-field contact-msg", placeholder: "Mensaje" %>
+    <%= f.text_field  :name, :required => true, class: "form-control col-sm-10 contact-form-field contact-name", placeholder: "Nombre"  %> 
+    <%= f.email_field  :email, :required => true, class: "form-control col-sm-10 contact-form-field contact-email", placeholder: "Email"  %> 
+    <%= f.text_area  :message, :as => :text, :required => true, class: "form-control col-sm-10 contact-form-field contact-msg", placeholder: "Mensaje", :pattern=>"^([\w+-.%]+@[\w-.]+\.[A-Za-z]{2,4},*[\W]*)+$" %>
     <%= f.hidden_field :nickname, :hint => 'Leave this field blank!'  %>
     <%= f.submit t("email_us"), class: "btn btn-default col-sm-8 col-sm-offset-2", id: "email-us"%>
   <% end %>

@@ -2,7 +2,6 @@
   <div class="row">
     <h1> Admin panel </h1>
     <p><%= link_to t("log_out"), '/logout' %></p>
-    
     <div class="col-sm-2">
       <div class="panel panel-default">
         <div class="panel-heading">
@@ -12,6 +11,23 @@
         <div class="panel-body admin-listing">
           <% @products.each do |product| %>
             <% if product.published == true %>
+              <li><%= image_tag product.img.url(:thumb)%><br>
+                ID <%= product.id %> | <%= link_to product.title, product_path(product.id) %> | <%= link_to t("edit_product"), edit_product_path(product.id) %>
+              </li> <br>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Unpublished Products</h3>
+          <p><%= link_to t("add_product"), new_product_path %></p>
+        </div>
+        <div class="panel-body admin-listing">
+          <% @products.each do |product| %>
+            <% if product.published != true %>
               <li><%= image_tag product.img.url(:thumb)%><br>
                 ID <%= product.id %> | <%= link_to product.title, product_path(product.id) %> | <%= link_to t("edit_product"), edit_product_path(product.id) %>
               </li> <br>

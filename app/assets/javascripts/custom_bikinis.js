@@ -4,6 +4,11 @@ $(document).ready(function () {
     $("#top-design-picked").attr("value", $(this).val() )
   })
 
+  $(".bottom-design").click(function() {
+    $("#bottom-design-picked").attr("value", $(this).val() )
+  })
+
+
   // Top neck tie color/pattern
   $(".top-neck-tie-fill").click(function() {
     if($(this).val()){

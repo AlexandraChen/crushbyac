@@ -1,11 +1,17 @@
 $(document).ready(function () { 
   //Top design
   $(".top-design").click(function() {
-    $("#top-design-picked").attr("value", $(this).val() )
+    $('.top-svg').css('visibility', 'hidden')
+    var top_id = $(this).val()
+    $("#top-design-picked").attr("value", top_id )
+    $('#'+ top_id).css('visibility', 'visible')
   })
-
+  //Bottom design
   $(".bottom-design").click(function() {
-    $("#bottom-design-picked").attr("value", $(this).val() )
+    $('.bottom-svg').css('visibility', 'hidden')
+    var bottom_id = $(this).val()
+    $("#bottom-design-picked").attr("value", bottom_id )
+    $('#'+ bottom_id).css('visibility', 'visible')
   })
 
 

@@ -1,8 +1,9 @@
+@import 'colors.scss';
+
 .swimwear{
   stroke:#1d1d1b;
   stroke-miterlimit:10;
 }
-
 
 .pallette-color{
   height: 25px; 
@@ -23,4 +24,5 @@
 
 .custom-bikini{
   margin-top: 20px;
+  border: 1px solid $silver;
 }

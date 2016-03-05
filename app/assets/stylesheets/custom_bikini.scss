@@ -24,7 +24,7 @@
 
 .custom-bikini{
   margin-top: 20px;
-  height: 512.5px;
+  height: 100%;
   border-radius: 0.7%;
 }
 
@@ -37,4 +37,8 @@
     width: 16.666%;
     height: 16.666%;
     padding: 5px;
+}
+svg{
+  width:100%;
+  height: auto;
 }

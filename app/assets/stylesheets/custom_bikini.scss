@@ -24,5 +24,17 @@
 
 .custom-bikini{
   margin-top: 20px;
-  border: 1px solid $silver;
+  height: 512.5px;
+  border-radius: 0.7%;
+}
+
+.custom-bikini-wrapper{
+  height: 600px;
+}
+
+.top-pic, .bottom-pic {
+    float: left;
+    width: 16.666%;
+    height: 16.666%;
+    padding: 5px;
 }

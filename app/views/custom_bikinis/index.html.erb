@@ -1,7 +1,7 @@
 <div class="section">
   <div class="container spacer">
     <%= render partial: 'custom_bikinis/pick_design' %>
-    <div class="row">
+    <div class="custom-bikini-wrapper">
       <div class="col-md-6 custom-bikini">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="550" height="550" y="10">
         <!-- Top designs svgs -->
@@ -24,11 +24,9 @@
       </div>
       <div class="col-md-6">
       <br>
-  <!--       Top Design: <input type="text" class= "top-design-pattern"><br>
-        Bottom Design: <input type="text" class= "bottom-design-pattern"><br> -->
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h3 class="panel-title">Top colors & patterns</h3>
+            <h3 class="panel-title">Colores y patrones</h3>
           </div>
           <div class="panel-body">
             <div class="col-md-6">
@@ -39,9 +37,7 @@
               <% @patterns.each do |fill| %>
               
                 <%= image_submit_tag(fill.img(:thumb), type: :image, value: fill.img.url, :data => { :fill_name => fill.name }, class: "top-neck-tie-fill pallette-color", name: :top_neck_tie) %>
-            
               <% end %>
-
             </div>
             <div class="col-md-6">
               <p>Main section:</p> 
@@ -73,7 +69,6 @@
             </div>
           </div>
         </div>
-
         <div class="col-md-6">
           <div class="panel panel-default">
             <div class="panel-heading">
@@ -101,26 +96,7 @@
             </div>
           </div>
         </div>
-       <%= render partial: 'custom_bikinis/new' %> 
-      <div class="row">
-      <div class="col-md-12">
-        <h3>Colores y estampados disponibles</h3>
       </div>
-        <% @colors.each do |color| %>
-          <div class="col-md-1">
-            <%= image_tag color.img(:medium), class: "main-pallette-item" %><br>
-            <p class="main-pallette-description"><%= color.name %></p>
-          </div>
-         <% end %>
-      </div>
-      <div class="row">
-        <% @patterns.each do |pattern| %>
-        <div class="col-md-1">
-          <%= image_tag pattern.img(:medium), class: "main-pallette-item" %><br>
-          <p class="main-pallette-description"><%= pattern.name %></p>
-        </div>
-       <% end %>
-      </div>
-    </div>
+      <%= render partial: 'custom_bikinis/new' %> 
   </div>
 </div>

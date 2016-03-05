@@ -1,22 +1,20 @@
-<div class="row">
-   <div class="col-md-6">
-     <h4>Escoge tu top </h4>
-   </div>
-   <div class="col-md-6">
-    <h4>Escoge tu bottom </h4>
-   </div>
-</div>
+<h4>Escoge tu top y bottom</h4>
 <div class="row">
   <% @top_designs.each do |top_design| %>
-    <div class="col-md-1">
-      <%= image_submit_tag(top_design.img(:medium), type: :image, value: top_design.name, class: "top-design main-pallette-item ", name: :top_design) %><br>
+    <div class="top-pic">
+       <%= image_submit_tag(top_design.img(:medium), type: :image, value: top_design.name, class: "top-design main-pallette-item ", name: :top_design) %><br>
       <p class="main-pallette-description"><%= top_design.name %></p>
     </div>
-   <% end %>
-   <% @bottom_designs.each do |bottom_design| %>
-    <div class="col-md-1">
-      <%= image_submit_tag(bottom_design.img(:medium), type: :image, value: bottom_design.name, class: "main-pallette-item bottom-design") %><br>
-      <p class="main-pallette-description"><%= bottom_design.name %></p>
-    </div>
-   <% end %>
+  <% end %>
 </div>
+<div class="row">
+  <% @bottom_designs.each do |bottom_design| %>
+    <div class="bottom-pic">
+       <%= image_submit_tag(bottom_design.img(:medium), type: :image, value: bottom_design.name, class: "main-pallette-item bottom-design") %><br>
+  <p class="main-pallette-description"><%= bottom_design.name %></p>
+    </div>
+  <% end %>
+</div>
+
+
+

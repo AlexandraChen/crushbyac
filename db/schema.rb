@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160216011613) do
+ActiveRecord::Schema.define(version: 20160306202540) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,10 @@ ActiveRecord::Schema.define(version: 20160216011613) do
     t.string   "top_ruffles_fill"
     t.string   "bottom_main_fill"
     t.string   "bottom_lateral_fill"
+    t.decimal  "height"
+    t.string   "bust"
+    t.decimal  "waist"
+    t.decimal  "hips"
   end
 
   create_table "fills", force: :cascade do |t|

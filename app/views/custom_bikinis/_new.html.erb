@@ -1,6 +1,14 @@
-<div class="col-sm-12"> <!-- style="display: none"> -->
-  <div style="display: none">
+<div class="col-sm-12 custom-bikini-form"> <!-- style="display: none"> -->
+  <div >
   <%= form_for @custom_bikini do |f| %>
+    <%= f.label "Height" %>
+    <%= f.number_field :height, class: "form-control", id: "height-picked", placeholder: :height%>
+    <%= f.label "Bust" %>
+    <%= f.text_field :bust, class: "form-control", id: "bust-picked", placeholder: :bust%>
+    <%= f.label "Waist" %>
+    <%= f.number_field :waist, class: "form-control", id: "waist-picked", placeholder: :waist%>
+    <%= f.label "Hips" %>
+    <%= f.number_field :hips, class: "form-control", id: "hips-picked", placeholder: :hips%>
     <%= f.label "Top design" %>
     <%= f.text_field :top_design, class: "form-control", id: "top-design-picked", placeholder: :top_design%>
     <%= f.label "Bottom design" %>
@@ -19,7 +27,7 @@
     <%= f.text_field :bottom_lateral_fill, class: "form-control", id: "bottom-lateral-fill-picked", placeholder: :bottom_lateral_fill%>
     </div>
     <br>
-    <%= f.submit "Crear bikini personalizado", class: "btn btn-default col-sm-12 create-custom-bikini", id: "interested-product"%>
+    <%= f.submit "Crear bikini personalizado", class: "btn btn-default col-sm-12 create-custom-bikini"%>
   <% end %>
 </div>
 

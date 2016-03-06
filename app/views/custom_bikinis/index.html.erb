@@ -2,7 +2,7 @@
   <%= render partial: 'custom_bikinis/pick_design' %>
   <div class="col-md-12 custom-bikini-wrapper">
     <div class="col-md-6 custom-bikini">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 550" y="10">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="-30 -30 550 550" y="10">
       <!-- Top designs svgs -->
         <%= render partial: 'custom_bikinis/svg_partials/tops/halter_01' %>  
         <%= render partial: 'custom_bikinis/svg_partials/tops/halter_02' %>
@@ -24,7 +24,15 @@
     <div class="col-md-6">
       <%= render partial: 'custom_bikinis/top_colors_and_patterns'  %>
       <%= render partial: 'custom_bikinis/bottom_colors_and_patterns' %>
-      <%= render partial: 'custom_bikinis/new' %> 
+      <div class="col-sm-12">
+        <button type="button" class="create-custom-bikini custom-design-btn" >Diseño listo!</button>
+      </div>
     </div>
   </div>
+  
+  <div class="col-sm-12 bikini-size-wrapper"> 
+    <%= render partial: 'custom_bikinis/bikini_size' %>
+  </div>
+  
+  <%= render partial: 'custom_bikinis/new' %> 
 </div>

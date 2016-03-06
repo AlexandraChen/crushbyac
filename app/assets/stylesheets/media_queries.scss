@@ -163,14 +163,23 @@
   }
   #panel-title{
     font-size: 3em;
-  };
-
-  #contact-us, #happy-customers, #location{
+  }
+  #contact-us, #happy-customers{
     >.container>.row>#panel-title{
-    margin-top: -10%;
     font-size: 3em;
     }
   }
+  #contact-us>.container>.row>#panel-title{
+    margin-top: -30%;
+  } 
+  #happy-customers>.container>.row>#panel-title{
+    margin-top: -10%;
+  }
+  #location>.container>.col-sm-12{
+    font-size: 0.75em;
+    margin-top: -10%;
+  }
+  
 }
 
 

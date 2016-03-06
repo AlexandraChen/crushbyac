@@ -13,8 +13,6 @@ $(document).ready(function () {
     $("#bottom-design-picked").attr("value", bottom_id )
     $('#'+ bottom_id).css('visibility', 'visible')
   })
-
-
   // Top neck tie color/pattern
   $(".top-neck-tie-fill").click(function() {
     if($(this).val()){
@@ -82,5 +80,48 @@ $(document).ready(function () {
       $(".bottom-lateral").attr("fill","#fff")
     }
   })
+  //sizing
+  $("#height").on('keyup',function(){
+    $("#height-picked").val( $(this).val() )
+  })
+  $("#bust").on('change',function(){
+    $("#bust-picked").val( $("#bust").val() )
+  })
+  $("#waist").on('keyup',function(){
+    $("#waist-picked").val( $(this).val() )
+  })
+  $("#hips").on('keyup',function(){
+    $("#hips-picked").val( $(this).val() )
+  })
+  // 1 2 3 steps to custom bikini
+  $(".top-design").click(function() {
+    $('html,body').animate({
+        scrollTop: $(".bottom-pic").offset().top - $(".bottom-pic").height()/2},
+        'slow')
+  })
+
+  $(".bottom-design").click(function() {
+    $('html,body').animate({
+        scrollTop: $(".custom-bikini").offset().top},
+        'slow')
+  })
+
+  
+  $(".custom-design-btn").click(function() {
+    $('html,body').animate({
+        scrollTop: $(".bikini-size-wrapper").offset().top},
+        'slow')
+  })
+
+  $(".bikini-size-btn").click(function() {
+    if($("#height").val() != "" && $("#waist").val() != "" && $("#hips").val() != "" && $("#bust").val() != null) {
+      $('html,body').animate({
+        scrollTop: $(".custom-bikini-form").offset().top- $(".custom-bikini-form").height()/5},
+        'slow')
+      return false
+    }
+    
+  })
+
 })
 

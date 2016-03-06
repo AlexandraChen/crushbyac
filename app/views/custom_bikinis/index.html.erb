@@ -1,6 +1,6 @@
 <div class="container spacer">
   <%= render partial: 'custom_bikinis/pick_design' %>
-  <div class="col-md-12">
+  <div class="col-md-12 custom-bikini-wrapper">
     <div class="col-md-6 custom-bikini">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 550" y="10">
       <!-- Top designs svgs -->
@@ -17,86 +17,14 @@
         <%= render partial: 'custom_bikinis/svg_partials/bottoms/bottom_04' %>
         <%= render partial: 'custom_bikinis/svg_partials/bottoms/highwaisted_01' %>
         <%= render partial: 'custom_bikinis/svg_partials/bottoms/highwaisted_02' %>
-<!--         Svg stuff in common   -->
+      <!-- Svg stuff in common   -->
         <%= render partial: 'custom_bikinis/custom_bikini_patterns' %>
       </svg>
     </div>
     <div class="col-md-6">
-      <div class="col-md-12">
-      <br>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h3 class="panel-title">Colores y patrones para el top</h3>
-          </div>
-          <div class="panel-body">
-            <div class="col-md-6">
-              <p>Tiras del cuello:</p> 
-              <% @colors.each do |fill| %>
-                <%= image_submit_tag(fill.img(:thumb), type: :image, value: fill.img.url, :data => { :fill_name => fill.name }, class: "top-neck-tie-fill pallette-color", name: :top_neck_tie) %>
-              <% end %><br>
-              <% @patterns.each do |fill| %>
-              
-                <%= image_submit_tag(fill.img(:thumb), type: :image, value: fill.img.url, :data => { :fill_name => fill.name }, class: "top-neck-tie-fill pallette-color", name: :top_neck_tie) %>
-              <% end %>
-            </div>
-            <div class="col-md-6">
-              <p>Sección principal:</p> 
-              <% @colors.each do |color| %>
-                <%= image_submit_tag(color.img(:thumb), type: :image, value: color.img.url, class: "top-main-fill pallette-color", name: :top_fill) %>
-              <% end %><br>
-              <% @patterns.each do |fill| %>
-                <%= image_submit_tag(fill.img(:thumb), type: :image, value: fill.img.url, :data => { :fill_name => fill.name }, class: "top-main-fill pallette-color", name: :top_fill) %>
-              <% end %>
-            </div>
-            <div class="col-md-6">
-              <p>Tiras de la espalda:</p>
-              <% @colors.each do |color| %>
-                <%= image_submit_tag(color.img(:thumb), type: :image, value: color.img.url, :data => { :color_id => color.name }, class: "top-back-tie-fill pallette-color", name: :top_back_tie) %>
-              <% end %><br>
-              <% @patterns.each do |fill| %>
-                <%= image_submit_tag(fill.img(:thumb), type: :image, value: fill.img.url, :data => { :fill_name => fill.name }, class: "top-back-tie-fill pallette-color", name: :top_back_tie) %>
-              <% end %>
-            </div>
-            <div class="col-md-6">
-              <p>Ruchas:</p>
-              <% @colors.each do |color| %>
-                <%= image_submit_tag(color.img(:thumb), type: :image, value: color.img.url, :data => { :color_id => color.name }, class: "top-ruffles-fill pallette-color", name: :top_ruffles) %>
-              <% end %><br>
-                <% @patterns.each do |fill| %>
-                  <%= image_submit_tag(fill.img(:thumb), type: :image, value: fill.img.url, :data => { :fill_name => fill.name }, class: "top-ruffles-fill pallette-color", name: :top_ruffles) %>
-                <% end %>
-              </div>
-            </div>
-          </div>
-        </div>
-      <div class="col-md-12">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h3 class="panel-title">Colores y patrones de bottom</h3>
-          </div>
-          <div class="panel-body">
-            <div class="col-md-6">
-              <p>Sección principal:</p>
-              <% @colors.each do |fill| %>
-                <%= image_submit_tag(fill.img(:thumb), type: :image, value: fill.img.url, :data => { :fill_name => fill.name }, class: "bottom-main-fill pallette-color", name: :bottom_fill) %>
-              <% end %><br>
-              <% @patterns.each do |fill| %>
-                <%= image_submit_tag(fill.img(:thumb), type: :image, value: fill.img.url, :data => { :fill_name => fill.name }, class: "bottom-main-fill pallette-color", name: :bottom_fill) %>
-              <% end %>
-            </div>    
-            <div col="col-md-6">
-              <p>Laterales:</p>
-              <% @colors.each do |fill| %>
-                <%= image_submit_tag(fill.img(:thumb), type: :image, value: fill.img.url, :data => { :fill_name => fill.name }, class: "bottom-lateral-fill pallette-color", name: :bottom_lateral) %>
-              <% end %><br>
-              <% @patterns.each do |fill| %>
-                <%= image_submit_tag(fill.img(:thumb), type: :image, value: fill.img.url, :data => { :fill_name => fill.name }, class: "bottom-lateral-fill pallette-color", name: :bottom_lateral) %>
-              <% end %>
-            </div>
-          </div>
-        </div>
-        </div>
-      </div>
+      <%= render partial: 'custom_bikinis/top_colors_and_patterns'  %>
+      <%= render partial: 'custom_bikinis/bottom_colors_and_patterns' %>
+      <%= render partial: 'custom_bikinis/new' %> 
     </div>
-    <%= render partial: 'custom_bikinis/new' %> 
+  </div>
 </div>

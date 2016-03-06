@@ -22,23 +22,52 @@
   text-align: center;
 }
 
-.custom-bikini{
-  margin-top: 20px;
-  height: 100%;
-  border-radius: 0.7%;
+.custom-bikini-wrapper{
+  margin-bottom: 20px;
 }
 
-.custom-bikini-wrapper{
-  height: 600px;
+.custom-bikini{
+  margin: 20px 0 20px 0;
+  height: auto;
+  border: 1px dashed $silver;
+  border-radius: 0.7%;
+  text-align: center;
 }
 
 .top-pic, .bottom-pic {
-    float: left;
-    width: 16.666%;
-    height: 16.666%;
-    padding: 5px;
+  float: left;
+  width: 16.666%;
+  height: 16.666%;
+  padding: 5px;
 }
 svg{
   width:100%;
   height: auto;
+}
+
+.panel-body>.col-md-6{
+  padding-left: 0;
+  padding-right: 0;
+  >p{
+    font-size: 9px;
+    margin-top: 10px;
+  }
+}
+
+.panel-title{
+  font-size: 12px;
+}
+
+.create-custom-bikini{
+  font-size: 16px;
+  margin-top: -25px;
+  border-radius: 0;
+  color: white;
+  background-color: $crush-blue;
+  border: 0.5em solid $crush-blue;
+  &:hover{
+    background-color: $light-gray;
+    color: $crush-blue;
+    font-weight: bold;
+  }
 }

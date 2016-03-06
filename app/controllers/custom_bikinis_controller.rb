@@ -7,8 +7,18 @@ class CustomBikinisController < ApplicationController
     @custom_bikini = CustomBikini.new
   end
 
+  def new
+    @custom_bikini = CustomBikini.new
+  end
+
   def create
     @custom_bikini = CustomBikini.new(custom_bikini_params)
+    if @custom_bikini.save
+      redirect_to custom_bikinis_path, notice: "Bikini personalizado creado exitosamente!"
+    else
+      flash[:notice] = "Algo falló con tu bikini personalizado. Por favor, intenta nuevamente!"
+      redirect_to custom_bikinis_path
+    end
   end
 
   private

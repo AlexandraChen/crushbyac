@@ -80,7 +80,7 @@
     margin-top: 2em;
     width: 100%;
   };
-  #panel-title{
+  #panel-title, .section-title{
     font-size:1em;
   };
   .container.product-spacer{
@@ -121,7 +121,7 @@
 
 @media (max-width:500px){
   .main-panel{
-    height: 25em;
+    height: 30em;
   }
   #product-spacer{
     margin-top: 1em;
@@ -134,9 +134,7 @@
       font-size: 0.8em;
     }
   }
-  p.value-proposition-title{
-    font-size: 1em;
-  }
+
   input#search{
     margin-top: -7em;
   }
@@ -161,25 +159,35 @@
     height: 18%;
     margin-top: 0.2em;
   }
-  #panel-title{
+  #panel-title, .section-title{
     font-size: 3em;
   }
-  #contact-us, #happy-customers{
-    >.container>.row>#panel-title{
+  #contact-us{
+    >.container>.row>.section-title{
     font-size: 3em;
     }
   }
-  #contact-us>.container>.row>#panel-title{
+  #contact-us>.container>.row>.section-title{
     margin-top: -30%;
   } 
-  #happy-customers>.container>.row>#panel-title{
+  #happy-customers>.section-title{
     margin-top: -10%;
+    font-size: 3em;
   }
-  #location>.container>.col-sm-12{
+  #location>.container{
     font-size: 0.75em;
     margin-top: -10%;
   }
-  
+
+  #value-proposition{
+    .container{
+     padding: 5em 0 5em 0;
+    }
+    p.value-proposition-text{
+      font-size: 1em;
+       padding: 0.5em 2em 0 2em ;
+    }
+  }
 }
 
 

@@ -3,29 +3,9 @@ $crush-gray: #696769;
 $light-gray: #F9F9F9;
 $silver: #DDDDDD;
 
-.client-img{
-  width: auto;
-  max-width: 100%;
-  height: auto;
-  max-height: 100%;
-  display: block;
-  margin: auto;
-  padding-bottom: 1em;
-}
-
-#happy-customers{
-  padding-bottom: 5em;
-  >.container>.row>#panel-title{
-    color: $crush-blue;
-    font-size: 4em;
-    text-align: center;
-    padding-top: 2em;
-  }
-}
-
-#clients-gallery{
+.clients-gallery{
   text-align: center;
-  padding-top: 2em;
+  margin-top: -7em;
   >a{
   color: $crush-blue;
   }
@@ -36,15 +16,72 @@ $silver: #DDDDDD;
 }
 
 .client-wrapper{
-  max-height: 25em;
-  max-width:25em;
+  margin: 0;
+  padding: 0;
+  width: 33.3333%;
+  height: auto;
+  display: inline-block;
+  // .client-img{
+  //   width: auto;
+  //   max-width: 100%;
+  //   height: auto;
+  //   max-height: 100%;
+  //   display: block;
+  //   margin: 0;
+  // padding: 0;
+  // }
 }
 
 .client-list{
-    display: block;
-    width: 30.90909090909091%;
-    height: auto;
-    position: relative;
-    float: left;
-    margin: 0 3.636363636363636% 3.636363636363636% 0;
+  display: block;
+  width: 30.90909090909091%;
+  height: auto;
+  position: relative;
+  float: left;
+  margin: 0 3.636363636363636% 3.636363636363636% 0;
 }
+
+/* outer container will define aspect ratio */
+.outer {
+  position: relative;
+  width: 100%;
+}
+
+.outer.r4x3 {
+  padding-top: 75%; /* "height" will be 3/4 of width */
+}
+
+/* inner container positioned absolutely and holds content */
+.outer .inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* example content */
+.little-box {
+  float: left;
+  width: 33.333%;
+  height: auto;
+  >img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    z-index: 1;
+    overflow: hidden;
+  }
+}
+
+/* just for display purposes... */
+.inner::after {
+  content: attr(data-size);
+  position: absolute;
+  left:0;
+  top: -1em;
+}
+
+
+

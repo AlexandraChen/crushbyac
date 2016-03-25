@@ -1,36 +1,38 @@
-<div class="container product-spacer">
-  <div class="row all-products">
-    <% unless @products.empty?  %>
-      <% @products.each do |product| %>
-        <div class="col-sm-4 product-wrapper">
-          <a href="<%= product_path(product.id) %>">
-            <div class="site-product">   
-            <% if product.published == false %>
-              <div class ="soldout-banner"></div>
-              <p id="soldout"><%= t("sold_out") %></p>
-            <% elsif product.discount != nil %>
-              <div class ="sale-banner">
-                <p id="sale">Sale!</p>
-              </div>
-            <% end %>
-            <div class="product-details-index"> 
-              <p id="title-index"><%= product.title %></p>
-              <% if product.discount == nil %>           
-                <p id="price-index">$<%= product.price.to_i %></p>
-              <% else %>
-                <p class="discount" id="price-index"> <%= t("was_sale") %> $<%= product.price.to_i %></p>
-                <p id="price-index">$<%= product.discount.to_i %></p>
+<div class="product-spacer">
+  <div class="container">
+    <div class="row all-products">
+      <% unless @products.empty?  %>
+        <% @products.each do |product| %>
+          <div class="col-sm-4 product-wrapper">
+            <a href="<%= product_path(product.id) %>">
+              <div class="site-product">   
+              <% if product.published == false %>
+                <div class ="soldout-banner"></div>
+                <p id="soldout"><%= t("sold_out") %></p>
+              <% elsif product.discount != nil %>
+                <div class ="sale-banner">
+                  <p id="sale">Sale!</p>
+                </div>
               <% end %>
-            </div>
-            <%= image_tag product.img.url, class: "product-img"%>
-            </div>
-          </a>
-          <br>
-        </div>
+              <div class="product-details-index"> 
+                <p id="title-index"><%= product.title %></p>
+                <% if product.discount == nil %>           
+                  <p id="price-index">$<%= product.price.to_i %></p>
+                <% else %>
+                  <p class="discount" id="price-index"> <%= t("was_sale") %> $<%= product.price.to_i %></p>
+                  <p id="price-index">$<%= product.discount.to_i %></p>
+                <% end %>
+              </div>
+              <%= image_tag product.img.url, class: "product-img"%>
+              </div>
+            </a>
+            <br>
+          </div>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
   </div>
-</div>
-<div class="text-center">
+  <div class="text-center">
    <%= will_paginate @products,:previous_label => 'Anterior', :next_label => 'Siguiente', renderer: BootstrapPagination::Rails %>
+  </div>
 </div>

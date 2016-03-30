@@ -6,6 +6,8 @@ $silver: #DDDDDD;
 .clients-gallery{
   text-align: center;
   margin-top: -7em;
+  position: absolute;
+  z-index: 999;
   >a{
   color: $crush-blue;
   }

@@ -16,3 +16,5 @@
 /config/application.yml
 
 /public/system
+Dockerfile
+docker-compose.yml

@@ -18,5 +18,5 @@ class Product < ActiveRecord::Base
     all.order("id DESC")
   end
 
-  default_scope { where(published: true) }
+  # default_scope { where(published: true) }
 end

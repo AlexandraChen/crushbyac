@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   resources :top_designs, except: [:destroy]
   resources :bottom_designs, except: [:destroy]
   resources :custom_bikinis, except: [:destroy]
+  resources :orders, except: [:destroy]
   resources :fills, except: [:destroy]
   resources :patterns, except: [:destroy]
   resources :clients, only: [:new, :create, :show]

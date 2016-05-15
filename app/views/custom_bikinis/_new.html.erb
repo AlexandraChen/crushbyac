@@ -1,0 +1,18 @@
+<div class="col-sm-12 custom-bikini-form"> <!-- style="display: none"> -->
+
+<%= form_for @order do |f| %>
+  <%= f.label "Nombre"%>
+    <%= f.text_field :name, class: "form-control", id: "top-back-tie-fill-picked", placeholder: "Nombre"%>
+    <%= f.label "Email" %>
+    <%= f.text_field :email, class: "form-control", id: "bottom-main-fill-picked", placeholder: :email %>
+    <%= f.label "Celular" %>
+    <%= f.text_field :cellphone, class: "form-control", id: "bottom-lateral-fill-picked", placeholder: "Número de celular" %>
+    <%= f.label "Dirección de entrega" %>
+    <%= f.text_field :cellphone, class: "form-control", id: "bottom-lateral-fill-picked", placeholder: "Direcciónd entrega o buscar en showroom" %>
+
+
+    <%= f.button :submit %>
+
+<% end %>
+
+

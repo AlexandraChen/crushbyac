@@ -1,0 +1,27 @@
+<div class="col-md-12">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">Colores y patrones de bottom</h4>
+    </div>
+    <div class="panel-body">
+      <div class="col-md-6">
+        <p>Sección principal:</p>
+        <% @colors.each do |fill| %>
+          <%= image_submit_tag(fill.img(:thumb), type: :image, value: fill.img.url, :data => { :fill_name => fill.name }, class: "bottom-main-fill pallette-color", name: :bottom_fill) %>
+        <% end %><br>
+        <% @patterns.each do |fill| %>
+          <%= image_submit_tag(fill.img(:thumb), type: :image, value: fill.img.url, :data => { :fill_name => fill.name }, class: "bottom-main-fill pallette-color", name: :bottom_fill) %>
+        <% end %>
+      </div>    
+      <div class="col-md-6">
+        <p>Laterales:</p>
+        <% @colors.each do |fill| %>
+          <%= image_submit_tag(fill.img(:thumb), type: :image, value: fill.img.url, :data => { :fill_name => fill.name }, class: "bottom-lateral-fill pallette-color", name: :bottom_lateral) %>
+        <% end %><br>
+        <% @patterns.each do |fill| %>
+          <%= image_submit_tag(fill.img(:thumb), type: :image, value: fill.img.url, :data => { :fill_name => fill.name }, class: "bottom-lateral-fill pallette-color", name: :bottom_lateral) %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

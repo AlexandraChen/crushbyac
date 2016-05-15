@@ -1,0 +1,34 @@
+<div class="wrap">
+  <div class="container spacer">
+    <%= render partial: 'custom_bikinis/pick_design' %>
+    <div class="col-md-12 custom-bikini-wrapper">
+      <div class="col-md-6 custom-bikini">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-30 -30 550 550" y="10">
+        <!-- Top designs svgs -->
+          <%= render partial: 'custom_bikinis/svg_partials/tops/halter_01' %>  
+          <%= render partial: 'custom_bikinis/svg_partials/tops/halter_02' %>
+          <%= render partial: 'custom_bikinis/svg_partials/tops/halter_03' %>
+          <%= render partial: 'custom_bikinis/svg_partials/tops/bandeau_01' %>
+          <%= render partial: 'custom_bikinis/svg_partials/tops/bandeau_02' %>
+          <%= render partial: 'custom_bikinis/svg_partials/tops/triangles_01' %>
+        <!-- Bottom Designs svgs    -->
+          <%= render partial: 'custom_bikinis/svg_partials/bottoms/bottom_01' %>
+          <%= render partial: 'custom_bikinis/svg_partials/bottoms/bottom_02' %>
+          <%= render partial: 'custom_bikinis/svg_partials/bottoms/bottom_03' %>
+          <%= render partial: 'custom_bikinis/svg_partials/bottoms/bottom_04' %>
+          <%= render partial: 'custom_bikinis/svg_partials/bottoms/highwaisted_01' %>
+          <%= render partial: 'custom_bikinis/svg_partials/bottoms/highwaisted_02' %>
+        <!-- Svg stuff in common   -->
+          <%= render partial: 'custom_bikinis/custom_bikini_patterns' %>
+        </svg>
+      </div>
+      <div class="col-md-6">
+        <%= render partial: 'custom_bikinis/top_colors_and_patterns'  %>
+        <%= render partial: 'custom_bikinis/bottom_colors_and_patterns' %>
+        <div class="col-sm-12">
+          <button type="button" class="create-custom-bikini custom-design-btn" >Diseño listo!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

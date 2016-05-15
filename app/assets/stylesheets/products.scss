@@ -1,28 +1,31 @@
-$crush-blue: #73afe0;
-$crush-gray: #696769;
-$light-gray: #F9F9F9;
-$silver: #DDDDDD;
-
+@import 'colors.scss';
 .navbar-collapse {
   text-align:center;
 }
-.product-filter {
-  display:inline-block;
-  float:none;
-}
-.product-filter>li>a{
-  color: $crush-blue;
-  &:hover{
-    background: $light-gray;
+
+.product-filter-container{
+  background-color: #fff;
+  .filter {
+    display:inline-block;
+    float:none;
   }
 }
 
-.container.product-spacer{
-  padding-top: 0.2em;
+.filter>li>a{
+  color: $crush-blue;
+  &:hover{
+    background: $crush-blue;
+    color: $light-gray; 
+  }
 }
 
-#product-spacer{
-  padding-top: 7em;
+.product-spacer{
+  padding-top: 10em;
+  background: #fff;
+}
+
+.main-panel-products-spacer{
+  background: #fff;
 }
 
 .product-img{

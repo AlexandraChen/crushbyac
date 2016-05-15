@@ -6,6 +6,8 @@
       <%= form_for @product, :url => { :action => "update" } do |f| %>
         <%= f.label "Product picture" %>
         <%= f.file_field :img %>
+        <%= f.check_box :published, {}, "true", "false"%>
+        <br>
         <%= f.label "Title" %>
         <%= f.text_field :title, class: "form-control", placeholder:"title" %>
         <%= f.label :description %>

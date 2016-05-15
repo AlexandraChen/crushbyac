@@ -2,36 +2,119 @@
   <div class="row">
     <h1> Admin panel </h1>
     <p><%= link_to t("log_out"), '/logout' %></p>
-    <p><%= link_to t("add_product"), new_product_path %></p>
-    <p><%= link_to t("add_client"), new_client_path %></p>
+    <div class="col-sm-2">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Products</h3>
+          <p><%= link_to t("add_product"), new_product_path %></p>
+        </div>
+        <div class="panel-body admin-listing">
+          <% @products.each do |product| %>
+            <% if product.published == true %>
+              <li><%= image_tag product.img.url(:thumb)%><br>
+                ID <%= product.id %> | <%= link_to product.title, product_path(product.id) %> | <%= link_to t("edit_product"), edit_product_path(product.id) %>
+              </li> <br>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Unpublished Products</h3>
+          <p><%= link_to t("add_product"), new_product_path %></p>
+        </div>
+        <div class="panel-body admin-listing">
+          <% @products.each do |product| %>
+            <% if product.published != true %>
+              <li><%= image_tag product.img.url(:thumb)%><br>
+                ID <%= product.id %> | <%= link_to product.title, product_path(product.id) %> | <%= link_to t("edit_product"), edit_product_path(product.id) %>
+              </li> <br>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Clients</h3>
+          <p><%= link_to t("add_client"), new_client_path %></p>
+        </div>
+        <div class="panel-body admin-listing">
+          <% @clients.each do |client| %>
+            <li><%= image_tag client.img.url(:thumb)%><br>
+              ID <%= client.id %> 
+            </li> <br>
+          <% end %>
+        </div>
+      </div>
+    </div>
 
-    <div class="col-sm-4">
-    <h4> Published <h4>
-      <% @products.each do |product| %>
-        <% if product.published == true %>
-          <li><%= image_tag product.img.url(:thumb)%>
-            ID <%= product.id %> | <%= link_to product.title, product_path(product.id) %> | <%= link_to t("edit_product"), edit_product_path(product.id) %>
-          </li> 
-        <% end %>
-      <% end %>
+    <div class="col-sm-2">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Fills</h3>
+          <p><%= link_to t("add_fill"), new_fill_path %></p>
+        </div>
+        <div class="panel-body admin-listing">
+          <% @colors.each do |color| %>
+            <li><%= image_tag color.img.url(:thumb)%><br>
+              ID <%= color.id %> | <%= link_to color.name, fill_path(color.id) %> | <%= link_to t("edit_fill"), edit_fill_path(color.id) %>
+            </li> <br>
+          <% end %>
+        </div>
+      </div>
     </div>
-    <div class="col-sm-4">
-    <h4> Unpublished <h4>
-      <% @products.each do |product| %>
-        <% if product.published != true %>
-          <li><%= image_tag product.img.url(:thumb)%>
-            ID <%= product.id %> | <%= link_to product.title, product_path(product.id) %> | <%= link_to t("edit_product"), edit_product_path(product.id) %>
-          </li> 
-        <% end %>
-      <% end %>
+
+    <div class="col-sm-2">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"> Patterns </h3>
+          <p><%= link_to t("add_fill"), new_fill_path %></p>
+        </div>
+        <div class="panel-body admin-listing">
+          <% @patterns.each do |pattern| %>
+            <li><%= image_tag pattern.img.url(:thumb)%><br>
+              ID <%= pattern.id %> | <%= link_to pattern.name, fill_path(pattern.id) %> | <%= link_to t("edit_fill"), edit_fill_path(pattern.id) %>
+            </li> <br>
+          <% end %>
+        </div>
+      </div>
     </div>
-    <div class="col-sm-4">
-    <h4> Clients <h4>
-      <% @clients.each do |client| %>
-          <li><%= image_tag client.img.url(:thumb)%>
-            ID <%= client.id %> 
-          </li> 
-      <% end %>
+
+    <div class="col-sm-2">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"> Top desings </h3>
+          <p><%= link_to t("add_top_design"), new_top_design_path %></p>
+        </div>
+        <div class="panel-body admin-listing">
+          <% @top_designs.each do |top_design| %>
+            <li><%= image_tag top_design.img.url(:thumb)%><br>
+              ID <%= top_design.id %> | <%= link_to top_design.name, top_design_path(top_design.id) %> | <%= link_to t("edit_top_design"), edit_top_design_path(top_design.id) %>
+            </li> <br>
+          <% end %>
+        </div>
+      </div>
     </div>
+
+    <div class="col-sm-2">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"> Bottom desings </h3>
+          <p><%= link_to t("add_bottom_design"), new_bottom_design_path %></p>
+        </div>
+        <div class="panel-body admin-listing">
+          <% @bottom_designs.each do |bottom_design| %>
+            <li><%= image_tag bottom_design.img.url(:thumb)%><br>
+              ID <%= bottom_design.id %> | <%= link_to bottom_design.name, bottom_design_path(bottom_design.id) %> | <%= link_to t("edit_bottom_design"), edit_bottom_design_path(bottom_design.id) %>
+            </li> <br>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>

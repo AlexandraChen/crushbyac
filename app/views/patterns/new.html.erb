@@ -1,0 +1,15 @@
+<div class="container spacer">
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+    <h2><%= t("add_pattern") %></h2>
+      <%= form_for @pattern do |f| %>
+        <%= f.label "Pattern picture" %>
+        <%= f.file_field :img %>
+        <%= f.label "pattern" %>
+        <%= f.text_field :name, class: "form-control", placeholder:"name" %>
+        <br>
+        <%= f.submit t("add_pattern"), class: "btn btn-default col-sm-12"%>
+      <% end %>
+    </div>
+  </div>
+</div>

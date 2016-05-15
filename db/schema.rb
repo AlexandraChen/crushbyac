@@ -11,10 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151121225317) do
+ActiveRecord::Schema.define(version: 20160306202540) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bottom_designs", force: :cascade do |t|
+    t.string   "name"
+    t.string   "img_file_name"
+    t.string   "img_content_type"
+    t.integer  "img_file_size"
+    t.datetime "img_updated_at"
+    t.boolean  "published",        default: true
+    t.integer  "user_id"
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+  end
 
   create_table "clients", force: :cascade do |t|
     t.string   "name"
@@ -24,11 +36,42 @@ ActiveRecord::Schema.define(version: 20151121225317) do
     t.string   "img_content_type"
     t.integer  "img_file_size"
     t.datetime "img_updated_at"
+    t.integer  "user_id"
   end
 
   create_table "contact_forms", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "custom_bikinis", force: :cascade do |t|
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "top_design"
+    t.string   "bottom_design"
+    t.string   "top_neck_tie_fill"
+    t.string   "top_main_fill"
+    t.string   "top_back_tie_fill"
+    t.string   "top_ruffles_fill"
+    t.string   "bottom_main_fill"
+    t.string   "bottom_lateral_fill"
+    t.decimal  "height"
+    t.string   "bust"
+    t.decimal  "waist"
+    t.decimal  "hips"
+  end
+
+  create_table "fills", force: :cascade do |t|
+    t.string   "name"
+    t.string   "img_file_name"
+    t.string   "img_content_type"
+    t.integer  "img_file_size"
+    t.datetime "img_updated_at"
+    t.boolean  "published"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.integer  "user_id"
+    t.string   "fill_type"
   end
 
   create_table "products", force: :cascade do |t|
@@ -47,6 +90,18 @@ ActiveRecord::Schema.define(version: 20151121225317) do
     t.string   "categories"
     t.string   "tags"
     t.boolean  "published",                                default: true
+  end
+
+  create_table "top_designs", force: :cascade do |t|
+    t.string   "name"
+    t.string   "img_file_name"
+    t.string   "img_content_type"
+    t.integer  "img_file_size"
+    t.datetime "img_updated_at"
+    t.boolean  "published",        default: true
+    t.integer  "user_id"
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
   end
 
   create_table "users", force: :cascade do |t|

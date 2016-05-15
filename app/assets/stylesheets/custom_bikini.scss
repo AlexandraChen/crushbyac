@@ -1,0 +1,105 @@
+@import 'colors.scss';
+
+.swimwear{
+  stroke:#1d1d1b;
+  stroke-miterlimit:10;
+}
+
+.pallette-color{
+  height: 25px; 
+  width: 25px;
+  border: 0.5px solid #EEE;
+}
+
+.main-pallette-item{
+  height: 100%;
+  width: 100%;
+  border: 0.5px solid #EEE;
+}
+
+.main-pallette-description{
+  font-size: 8px;
+  text-align: center;
+}
+
+.custom-bikini-wrapper{
+  margin-bottom: 20px;
+}
+
+.custom-bikini{
+  margin: 20px 0 20px 0;
+  height: auto;
+  border: 1px dashed $silver;
+  border-radius: 0.7%;
+  text-align: center;
+}
+
+.top-pic, .bottom-pic {
+  float: left;
+  width: 16.666%;
+  height: 16.666%;
+  padding: 5px;
+}
+svg{
+  width:100%;
+  height: auto;
+}
+
+.panel-body>.col-md-6{
+  padding-left: 0;
+  padding-right: 0;
+  >p{
+    font-size: 9px;
+    margin-top: 10px;
+  }
+}
+
+.panel-title{
+  font-size: 12px;
+}
+
+.create-custom-bikini{
+  font-size: 14px;
+  width:100%;
+  margin-top:0;
+  border-radius: 0;
+  color: white;
+  background-color: $crush-blue;
+  border: 0.5em solid $crush-blue;
+  &:hover{
+    background-color: $light-gray;
+    color: $crush-blue;
+    font-weight: bold;
+  }
+}
+
+.bikini-size-wrapper{
+  width:100%;
+  height: 350px;
+  padding-top: 70px;
+  >h4{
+    margin-bottom: 50px;
+  }
+  >.col-xs-6{
+  margin: 10px 0 10px 0;
+  }
+}
+input:required:focus {
+  border: 1px solid red;
+  outline: none;
+}
+
+input.create-custom-bikini.bikini-size-btn{
+  margin-top: 50px;
+}
+
+input{
+  &#hips, &#waist, &#height, &#hips{
+  border: 1px solid $silver;
+  border-radius: 3px;
+  }
+  &:required:focus {
+  border: 1px solid red;
+  outline: none;
+  }
+}

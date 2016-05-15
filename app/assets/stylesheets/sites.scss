@@ -1,7 +1,4 @@
-$crush-blue: #73afe0;
-$crush-gray: #696769;
-$light-gray: #F9F9F9;
-$silver: #DDDDDD;
+@import 'colors.scss';
 
 *{
   font-family: Verdana, Geneva, sans-serif;
@@ -10,6 +7,13 @@ $silver: #DDDDDD;
 html, body {
   height: 100%;
   width: 100%;
+  margin: 0;
+  padding: 0;
+  background: url("/assets/sites/sanblas.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .navbar-menu{
@@ -29,6 +33,7 @@ html, body {
 .navbar-default{
  .navbar-nav>li>a {
     color: $crush-blue;
+    margin-top: -0.5em;
   };
   .navbar-nav>li>a>div>i{
     font-size: 1.5em;
@@ -40,16 +45,18 @@ html, body {
     height: 2.5em;
     width: 2.5em;
     text-align: center;
+    margin-top: -0.6em;
   };
 }
 
 a.navbar-media{
-  margin-top: -0.5em;
+  margin-top: -0.2em;
 }
 
 img[src="/assets/sites/logo-crush.jpg"]{
   width: auto;
-  height: 5em;
+  height: 4.5em;
+  margin-top: -0.4em;
 }
 
 #notice, #alert{
@@ -82,15 +89,15 @@ img[src="/assets/sites/logo-crush.jpg"]{
 .main-panel{
   height: 35em;
   width: 100%;
-  background: url("/assets/sites/sanblas.jpg") no-repeat;
-  background-size: cover;
+  // background: url("/assets/sites/sanblas.jpg") no-repeat;
+  // background-size: cover;
 }
 
 .overlay{ 
   width: 100%;
   height: 100%;
-  background: black; 
-  opacity: 0.10;
+  // background: black; 
+  // opacity: 0.10;
 }
 
 .headlines{
@@ -125,44 +132,47 @@ img[src="/assets/sites/logo-crush.jpg"]{
   min-height: 100%;
   height: auto !important;
   height: 100%;
+  background-color: #fff;
   // margin: 0 auto -60px;
 }
 .container.spacer{
-  margin-top: 5em;
+  margin-top: 6em;
 }
 
-#value-proposition{
+.value-proposition{
   height: auto;
   width: 100%;
   text-align: center;
   background-color:$crush-blue;
-  margin-top: 5em;
-  padding-top: 5em;
   p.value-proposition-text{
-    padding: 0.8em 1.5em 6em 1.5em ;
+    padding: 0.8em 0.5em 0 0.5em ;
     text-align: justify;
     color: $light-gray;
+    font-size: 1.2em;
   }
   p.value-proposition-title{
     text-align: left;
     font:{
       weight: bold;
-      size: 2.3em;
+      size: 1.5em;
     };
     color: $light-gray;
     text-align: center;
   }
   .fa{
-    margin: 1em 0 0.3em 0;
+    margin: 0.3em 0 0.3em 0;
     font-size: 4em;
     color: $light-gray;
+  }
+  .container{
+    padding: 11em 0 11em 0;
   }
 }
 
 #contact-us{
   width: 100%;
   text-align: center;
-  background-color:$crush-blue;
+  // background-color:$crush-blue;
   padding-top: 10em;
 }
 
@@ -183,43 +193,48 @@ img[src="/assets/sites/logo-crush.jpg"]{
   background-size: 100%;
 }
 
+
+.section-title{
+  font-size: 4em;
+  text-align: center;
+}
 #location{
-  #panel-title{
-    color: $crush-blue;
-    font-size: 4em;
-    text-align: center;
-    margin: 2em 0 1em 0;
+  color: $crush-blue;
+  .section-title{
+    margin: 2em 0 0.5em 0;
   }
+  // background-color: ;
 }
 
-#happy-customers{
-  #panel-title{
-    margin: 0 0 1em 0;
+.happy-customers{
+  // padding-bottom: 5em;
+  .section-title{
+    padding: 1em 0 1em 0;
+    color: $crush-blue;
   }
+  background-color: #fff;
 }
 
 .address{
   margin: 2em 0 5em 0;
   p{
     color: $crush-gray;
-    font-size: 1.22em;
+    font-size: 2em;
   };
   text-align: center;
 }
 
 #googleMap{
-  height: 20em;
-  width: 35em;
+  height: 30em;
+  width: 50em;
   margin-top: 2em;
   margin:auto;
 }
 
 #contact-us{
   padding-top: 10em;
-  #panel-title{
+  .section-title{
     color: $light-gray;
-    font-size: 4em;
-    text-align: center;
     margin: 0em 0 0.5em 0;
   };
   #contact-info{
@@ -233,6 +248,7 @@ img[src="/assets/sites/logo-crush.jpg"]{
   #contact-form{
     margin-top: 1em;
   }
+  background-color: $crush-blue;
 }
 
 #email-us{

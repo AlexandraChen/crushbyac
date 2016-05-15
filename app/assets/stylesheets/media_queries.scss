@@ -80,7 +80,7 @@
     margin-top: 2em;
     width: 100%;
   };
-  #panel-title{
+  #panel-title, .section-title{
     font-size:1em;
   };
   .container.product-spacer{
@@ -98,6 +98,14 @@
   }
   .container>.row>#panel-title{
     font-size:80%
+  }
+  #value-proposition{
+    .container{
+     padding: 5em 0 5em 0;
+    }
+  }
+  .clients-gallery{
+    margin-top: 0;
   }
 }
 
@@ -117,11 +125,19 @@
   input#search{
     margin-top: 1em;
   }
+  #value-proposition{
+    .container{
+     padding: 5em 0 5em 0;
+    }
+  }
+  .clients-gallery{
+    margin-top: 0;
+  }
 }
 
 @media (max-width:500px){
   .main-panel{
-    height: 25em;
+    height: 30em;
   }
   #product-spacer{
     margin-top: 1em;
@@ -134,9 +150,7 @@
       font-size: 0.8em;
     }
   }
-  p.value-proposition-title{
-    font-size: 1em;
-  }
+
   input#search{
     margin-top: -7em;
   }
@@ -161,15 +175,42 @@
     height: 18%;
     margin-top: 0.2em;
   }
-  #panel-title{
+  #panel-title, .section-title{
     font-size: 3em;
-  };
-
-  #contact-us, #happy-customers, #location{
-    >.container>.row>#panel-title{
-    margin-top: -10%;
+  }
+  #contact-us{
+    >.container>.row>.section-title{
     font-size: 3em;
     }
+  }
+  #contact-us>.container>.row>.section-title{
+    margin-top: -30%;
+  } 
+
+  #happy-customers {
+    .section-title{
+      margin: 0;
+      font-size: 3em;
+      padding: 0.5em 0 0.5em 0;
+    }  
+  }
+  #location>.container{
+    font-size: 0.75em;
+    margin-top: -10%;
+  }
+
+  #value-proposition{
+    .container{
+     padding: 5em 0 5em 0;
+    }
+    p.value-proposition-text{
+      font-size: 1em;
+       padding: 0.5em 2em 0 2em ;
+    }
+  }
+
+  .clients-gallery{
+    margin-top: 0;
   }
 }
 

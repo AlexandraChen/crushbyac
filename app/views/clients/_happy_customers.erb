@@ -1,19 +1,18 @@
-<div id="happy-customers">
-  <div class="container">
-    <div class="row">
-    <p id="panel-title"> <%= t("happy_customers") %> </p>
-      <% if @clients == nil %>
-        <p> No clients pics </p>
-      <% else %>
-        <% @clients.each do |client| %>
-          <div class="col-sm-4 product-wrapper">
-            <%= image_tag client.img.url(:medium), class: "client-img"%>
-          </div>
-        <% end %>
+<div id="happy-customers" class="happy-customers">
+  <p class="section-title"> <%= t("happy_customers") %> </p>
+  <div class="outer r4x3">
+    <div class="inner">
+      <% @clients.each do |client| %>
+        <div class="little-box">
+          <%= image_tag client.img.url(:medium), class: "client-img"%> 
+        </div>
       <% end %>
     </div>
-    <% if current_page?("/") %>
-      <p id="clients-gallery"><%= link_to "Ver galería completa", happy_customers_path %></p>
-    <% end %>
-  </div> 
+  </div>
+  <% if current_page?("/") %>
+    <p class="col-sm-12 clients-gallery"><%= link_to "Ver galería completa", happy_customers_path %></p>
+  <% end %>
 </div>
+
+
+

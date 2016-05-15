@@ -22,6 +22,7 @@
 es:
   #ERRORS
   full_name_error: "Por favor, escribe tu nombre y apellido separado por un espacio"
+  you_have_to_be_admin: "Oops! Debes de ser un administrador para proseguir."
   #SITE
   why_crush: "¿Por qué Crush?"
   contact: "Contáctanos"
@@ -69,6 +70,36 @@ es:
   client_new_success: "Foto de cliente agregada con éxito"
   client_new_fail: "Oops! Parece que te faltó la foto o el nombre del cliente."
   happy_customers: "Clientes felices"
+  add_client: "Agregar cliente"
+  #FILL
+  fill_name: "Nombre del color o patrón"
+  fill_new_success: "Color o patrón agregado exitosamente"
+  fill_new_fail: "Oops! Parece que falló la subida del color o patrón"
+  add_fill: "Agregar color o patrón"
+  edit_fill: "Editar color o patrón"
+  fill_edit_success: "Color o patrón editado exitosamente!"
+  fill_edit_fail: "La edición del color o patrón falló."
+  fill_img: "Imágen del color o patrón"
+  #BOTTOM DESIGN
+  bottom_design_new_success: "Diseño de bottom agregado exitosamente."
+  bottom_design_new_fail: "Oops! Parece que falló la subida del Diseño de bottom."
+  add_bottom_design: "Agregar Diseño de bottom"
+  edit_bottom_design: "Editar Diseño de bottom"
+  bottom_design_edit_success: "Diseño de bottom editado exitosamente!"
+  bottom_design_edit_fail: "La edición del Diseño de bottom falló."
+  bottom_design_img: "Imagen del bottom"
+  bottom_design_name: "Nombre del bottom"
+  #TOP DESIGN
+  add_top_design: "Agregar diseño de top"
+  edit_top_design: "Editar diseño de top"
+  top_design_new_success: "Diseño de top agregado exitosamente."
+  top_design_new_fail: "Oops! Parece que falló la subida del Diseño de top."
+  add_top_design: "Agregar Diseño de top"
+  edit_top_design: "Editar Diseño de top"
+  top_design_edit_success: "Diseño de top editado exitosamente!"
+  top_design_edit_fail: "La edición del Diseño de top falló."
+  top_design_img: "Imagen del top"
+  top_design_name: "Nombre del top"
   #FOOTER
   faq: "Preguntas frecuentes"
   terms: "Términos y condiciones"

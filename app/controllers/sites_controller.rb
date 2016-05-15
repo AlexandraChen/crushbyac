@@ -6,6 +6,7 @@ class SitesController < ApplicationController
     @products = Product.recent.paginate(:page => params[:page], :per_page => 12)
     @contact_form = ContactForm.new
     @clients = Client.all.order('random()').limit(6)
+    @order_item = current_order.order_items.new
 	end
 
   def contact_us

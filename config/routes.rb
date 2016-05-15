@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'order_items/create'
+
+  get 'order_items/update'
+
+  get 'order_items/destroy'
+
+  get 'carts/show'
+
   devise_for :users
   root "sites#index"
   devise_scope :user do
@@ -28,6 +36,10 @@ Rails.application.routes.draw do
 
   get "/happy_customers"      => "clients#happy_customers"
   get "/custom"               => "custom_bikinis#index" 
+
+  resource :cart, only: [:show]
+  resources :order_items, only: [:create, :update, :destroy]
+  get "/product-orders" => "products#index"
 
 end
 

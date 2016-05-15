@@ -1,6 +1,11 @@
 class ProductsController < ApplicationController
 	#only admin users can create
 	# before_action :current_user, only: [:new, :create, :update]
+  # def index
+  #   @products = Product.all
+  #   @order_item = current_order.order_items.new
+  # end
+  
   def show
     @product = Product.find(params[:id])
     @contact_form = ContactForm.new

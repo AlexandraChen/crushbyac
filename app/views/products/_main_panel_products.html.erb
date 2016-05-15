@@ -22,6 +22,19 @@
                   <p class="discount" id="price-index"> <%= t("was_sale") %> $<%= product.price.to_i %></p>
                   <p id="price-index">$<%= product.discount.to_i %></p>
                 <% end %>
+
+                 <%= form_for @order_item, remote: true do |f| %>
+                  <div class="input-group">
+                    <%= f.number_field :quantity, value: 1, class: "form-control", min: 1 %>
+                    <div class="input-group-btn">
+                      <%= f.hidden_field :product_id, value: product.id %>
+                      <%= f.submit "Add to Cart", class: "btn btn-primary" %>
+                    </div>
+                  </div>
+                <% end %>
+
+
+
               </div>
               <%= image_tag product.img.url, class: "product-img"%>
               </div>

@@ -1,5 +1,7 @@
 class Product < ActiveRecord::Base
 	belongs_to :user
+  has_many :order_items
+
   validates :title, presence: true, length: {maximum: 40}
   # validates :description, presence: true
   validates :user, presence: true
@@ -15,4 +17,6 @@ class Product < ActiveRecord::Base
   def self.recent
     all.order("id DESC")
   end
+
+  default_scope { where(published: true) }
 end

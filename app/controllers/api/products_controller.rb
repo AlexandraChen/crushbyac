@@ -3,7 +3,7 @@ class Api::ProductsController < ApplicationController
 
   def index
     if params[:search]
-      @products = Product.search(params[:search]).all
+      @products = Product.recent.search(params[:search]).all
     end
     render :index
   end
